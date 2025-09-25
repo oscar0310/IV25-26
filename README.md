@@ -14,6 +14,8 @@ para la realización de estos horarios, como son:
 - Se necesita un número mínimo de dos personas por sección ( Pescadería, Panadería, Frutería, Charcutería y Carnicería) en cada turno.
 
 Estos factores son los que le provoca grandes quebraderos de cabeza y la gran perdida de tiempo.
+
+## [CONFIGURACIÓN](configu_ssh/config.md)
  
 
 
