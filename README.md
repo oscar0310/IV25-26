@@ -16,7 +16,7 @@ para la realización de estos horarios, como son:
 
 Estos factores son los que le provoca grandes quebraderos de cabeza y la gran perdida de tiempo.
 
-## [CONFIGURACIÓN](configu_ssh/config.md)
+## [Enlace para ver configuración](configu_ssh/config.md)
  
 
 
