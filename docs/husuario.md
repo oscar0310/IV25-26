@@ -1,0 +1,7 @@
+# HISTORIAS DE USUARIO
+## [HU1] Juan coordinador con experiencia de 20 años en el sector.
+Juan es un hombre de 50 años, que nunca se ha interesado con la tecnología por tanto no dispone de un gran conocimiento sobre ella. Él desea algo que le pueda ayudar a hacer los horarios para evitar los posibles problemas que ha tenido anteriormente con la rotación de días libres , los cuales le han provocado tener que modificar varias veces esos horarios perdiendo una gran cantidad de tiempo que podría haber empleado en otras labores de la tienda.
+## [HU2] Pedro, coordinador nuevo en el sector.
+Pedro es un coordinador que acaba de terminar su formación como coordinador y se le acaba de atribuir su primera tienda. Por tanto no tiene una gran experiencia en la elaboración de horarios. Para perder el mínimo tiempo intenta cuadrar los días libres y los turnos, necesita una herramienta que le permita realizar esta tarea . Él tiene conocimientos previos con la tecnología debido a que ha estado trabajando durante un gran tiempo en la cadena en el departamento de informática.
+## [HU3] Pablo, problemas con asignación de personas a los puestos.
+Pablo ha tenido bastantes problemas con el control de que en cada turno tenga dos personas para cada sección, equivocándose bastante veces provocando que tenga que mover días y turnos para poder conseguir que ningún puesto quede vacío. Es por esto que necesita alguna herramienta que le ayude a realizar estos horarios permitiendole evitar esas perdidas de tiempo.
