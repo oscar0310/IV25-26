@@ -17,6 +17,8 @@ para la realización de estos horarios, como son:
 Estos factores son los que le provoca grandes quebraderos de cabeza y la gran perdida de tiempo.
 
 ## [Enlace para ver configuración](configu_ssh/config.md)
+## [Enlace para ver las historias de usuario](docs/husuario.md)
+## [Enlace para ver los milestone](docs/milestone.md)
  
 
 
