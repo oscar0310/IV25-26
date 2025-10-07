@@ -8,7 +8,7 @@ datos y elección del lenguaje usado para la codificación.
 - HU relacionadas: HU1, HU2, HU3.
 
 ## MILESTONE 1: IMPLEMENTAR ALGORITMO DE CREACIÓN DE HORARIOS BÁSICOS.  
-- Objetivos: Crear un algoritmo capaz de cumplir unos requisitos básicos que son que los días libres de cada semana deben ser correlativos y no debe de haber más de tres semanas en el mismo turno.
+- Objetivos: Crear un algoritmo capaz de cumplir unos requisitos básicos que son que los días libres de cada semana deben ser correlativos (si una seman alibras el lunes, la siguiente el martes, teniendo en cuenta que se libran todos los domingos) y no debe de haber más de tres semanas en el mismo turno ( disponiendo de turno de mañana y de tarde).
 - Producto minimo viable: Un modelo codificado con la capacidad de crear estos horarios.
 - Verificación: Será viable si se cumplen los dos requisitos básicos.
 - HU relacionadas: HU1, HU2, HU3.
