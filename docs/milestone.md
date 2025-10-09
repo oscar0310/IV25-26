@@ -9,5 +9,5 @@
 ## MILESTONE 1: ALGORITMO DE CREACIÓN DE HORARIOS BÁSICOS.  
 - Objetivos: Crear un algoritmo básico capaz de asignar días libres.
 - Producto minimo viable: Un módulo funcional.
-- Verificación: Será viable si se cumplen la correlación de los días libres, si una semana se libra el lunes la siguiente el martes, y librar el domingo siempre.
+- Verificación: Será viable si se cumplen la correlación de los días libres.
 - HU relacionadas: HU1, HU2, HU3.
