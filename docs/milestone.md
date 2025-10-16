@@ -1,24 +1,8 @@
 # MILESTONES DEL PROYECTO
 
-## MILESTONE 0: ASENTAR LAS BASES Y MODELIZAR EL PROBLEMA.
-- Objetivos: Realizar un análisis completo de las historias de usuario tratando de entender el problema para un correcto diseño de los modúlos, elección del lenguaje usado para la codificación y expresar que estructuras de datos vamos a usar para tratar con los datos.
-- Producto minimo viable: Código fuente en el lenguaje seleccionado.
-- Comprobación:
-  - Se debe de haber seguido una buena metodología de desarrollo:
-    -   Creando Issues para los problemas.
-    -   Creando ramas para resolverlos.
-    -   Y pull request para cerrar los Issues.
-  - Se tiene que haber seguido las buenas prácticas según el lenguaje elegido.
-- HU relacionadas: HU1, HU2, HU3.
+## MILESTONE 0: MODELIZACIÓN DEL PROBLEMA.
+Modelo del problema representando las entidades y objetos valor como se definen en las HU, siguiendo una buena metodología y se entregará como código fuente.
 
 ## MILESTONE 1: ALGORITMO DE CREACIÓN DE HORARIOS BÁSICOS.  
-- Objetivos: Crear un algoritmo básico capaz de asignar días libres.
-- Producto minimo viable: Código fuente funcional.
-- Comprobación:
-  - Se debe de haber seguido una buena metodología de desarrollo:
-    -   Creando Issues para los problemas.
-    -   Creando ramas para resolverlos.
-    -   Y pull request para cerrar los Issues.
-  - Se debe haber seguido las buenas prácticas según el lenguaje elegido.
-  - Será viable si se cumplen la correlación de los días libres.
-- HU relacionadas: HU1, HU2, HU3.
+Código fuente básico capaz de asignar días libres como se explica en la HU1. Es viable si ha seguido  una buena metodología , creando Issues para los problemas, ramas para resolverlos y pull request para cerrarlos y si pasa los Test.
+
