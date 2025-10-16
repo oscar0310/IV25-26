@@ -2,7 +2,7 @@
 
 ## MILESTONE 0: ASENTAR LAS BASES Y MODELIZAR EL PROBLEMA.
 - Objetivos: Realizar un análisis completo de las historias de usuario tratando de entender el problema para un correcto diseño de los modúlos, elección del lenguaje usado para la codificación y expresar que estructuras de datos vamos a usar para tratar con los datos.
-- Producto minimo viable: Un modelo estructurado codificado en el lenguaje seleccionado.
+- Producto minimo viable: Código fuente en el lenguaje seleccionado.
 - Verificación:
   - Se tiene que haber seguido las buenas prácticas a la hora de codificar.
   - Se tiene que haber modulizado de acuerdo con el problema.
@@ -11,7 +11,7 @@
 
 ## MILESTONE 1: ALGORITMO DE CREACIÓN DE HORARIOS BÁSICOS.  
 - Objetivos: Crear un algoritmo básico capaz de asignar días libres.
-- Producto minimo viable: Un módulo funcional.
+- Producto minimo viable: Código fuente funcional.
 - Verificación:
   - Se debe de haber seguido una buena metodología de desarrollo:
     -   Creando Issues para los problemas.
