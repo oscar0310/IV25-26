@@ -1,0 +1,1 @@
+We usually put code related to running our actual programme in the bin/ directory. Our bin executable files, which run CLI applications, are detailed here.
