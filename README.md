@@ -19,6 +19,7 @@ Estos factores son los que le provoca grandes quebraderos de cabeza y la gran pe
 ## [Enlace para ver configuración](configu_ssh/config.md)
 ## [Enlace para ver las historias de usuario](docs/husuario.md)
 ## [Enlace para ver los milestone](docs/milestone.md)
+## [Enlace para ver user-journey](docs/user-journey.md)
 
 
 ## LENGUAJE Y GESTORES USADOS: 
