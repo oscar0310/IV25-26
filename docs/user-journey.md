@@ -12,3 +12,5 @@ Sabiendo que si hay dos trabajadores con el mismo nombre seles diferenciará con
 2. Este fichero se pasará al codigo fuente.
 
 3. Este devolverá un horario.
+
+[Se dispone de un ejemplo de entrada en formato .xlsx](docs/)
