@@ -2,10 +2,13 @@
 Todo **usuario** que use  nuestro código fuente lo realizará de la siguiente manera:
 
 1. La persona que lo use dispondrá de un fichero excel(.xlsx) con el siguiente formato:
-        Trabajador              Sección donde Trabaja
-        NombreTrabajador1             Sección
-        NombreTrabajador2             Sección
-        NombreTrabajador3             Sección
+
+|   Trabajador     |Sección donde Trabaja|
+|------------------|---------------------|
+|NombreTrabajador1 |       Sección       |
+|NombreTrabajador2 |       Sección       |
+|NombreTrabajador3 |       Sección       |
+
 
 Sabiendo que si hay dos trabajadores con el mismo nombre seles diferenciará con el apellido
 
