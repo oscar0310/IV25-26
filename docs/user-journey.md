@@ -13,4 +13,4 @@ Sabiendo que si hay dos trabajadores con el mismo nombre seles diferenciará con
 
 3. Este devolverá un horario.
 
-[Se dispone de un ejemplo de entrada en formato .xlsx](docs/)
+[Se dispone de un ejemplo de entrada en formato .xlsx](../docs/ejemploEntrada.xlsx)
