@@ -1,0 +1,53 @@
+# DOCUMENTACIÓN DE GESTORES:
+
+En los proyectos siempre hay una serie de tareas que se llevan a cabo de forma muy repetitiva, aquí es donde entran los gestores, estos son los encargados de gestionar y realizar estas actividades tan repetitivas. Pero antes de esto se necesita haber escogído el lenguaje , porque cada lenguaje dispone de diferentes opciones en gestores.
+
+Para ello tenemos que partir del lenguaje escogido para este proyecto el cual es **ruby**.
+
+## JUSTIFICACIÓN DEL LENGUAJE:
+
+Para elegir el lenguaje del problema se tuvo en cuenta una serie de lenguajes, entre ellos se comentaron en clase go, typescript, ruby y a parte me llamó la curiosidad Kotlin. Tanto go como typescript fueron descartados debido a que otros compañeros ya lo habían elegido antes, dejando las opciones de ruby y kotlin.
+
+**Kotlin**  era mi idea principal para su uso pero tras largas conversaciones con JJ entendí que al ser de la JVM al igual que java acarrearía el roblema de  que los conceptos vistos en la asignatura difieren bastante de como se trabaja en kotlin. Por tanto esto le añadiría un plus de dificultad a la superación en los objetivos. AUnque también al usarlo la experiencia que ganaríamos sería muy buena ya que kotlin es un lenguaje muy usado, multiplataforma y teniendo una buenísima remuneración.
+
+En cambio **Ruby** se asemeja a python, por tanto en cuanto al plus de dificultad de los conceptos se eliminaría, al ser tambien un lenguaje muy usado se dispone de una gran cantidad de documentación. Es un lenguaje con una curva de aprendizaje no muy grande y añadiendole que en la carrera se usa, quitaríamos esa necesidad de aprender desde cero, dejando más tiempo para trabajar los conceptos propuestos de la asignatura.
+
+Tras debatir los pros y contras en un Issue con mi compañero Gabriel Francisco nos decidímos por ruby.
+
+Una vez elegido el lenguaje hay que centrarse en que versión instalar para desplegar la aplicación, en un proyecto es recomendable probar distintas versiones del lenguaje para comprobar que no tenemos problemas en las distintas versiones, aunque a la hora de trabajar usaremos la última versión estable. Aquí es donde entra el **gestor de versiones**.
+
+## GESTOR DE VERSIONES.
+
+El gestor de versiones nos permite tener varias versiones de un mismo lenguaje en la misma máquina podiendo variar entre ellas gracias a él.
+
+Para trabajar con **ruby** a la hora de elegir un gestor de versiones , se suele hablar de dos solo disponibles para el propio lenguaje. Estos son **rbenv** que es el estandar moderno, **RVM** que es el clásico. Vamos a enumerar pros y contras para decantarnos por uno:
+
+- **rvenb**: es una herramienta ligera, esta herramienta sigue la fiosofía de hacer una sola cosa pero bien ( gestionar y cambiar entre versiones) por tanto es una herramienta muy minimalista . Esta herramienta no gestiona las gemsets* por tanto hay que usar un gestor de dependencias y no realizará ninguna modificación en la shell, por tanto es menos intrusivo que RVM ( se explicará en su apartado por qué es intrusivo). Hablando de la velocidad al ser una herramienta ligera y minimalista es bastante rápida. Está pensado para Desarrolladores que buscan simplicidad y no tienen problemas con buscar una herramienta que gestione las dependencias.
+
+- **RVM**: Al contrario que rvenb no es una herraienta ligera, si no que es una herramienta todo en uno se podría decir que es un gestor del entorno completo. Esta herramienta si gestiona los gemsets* teniendo conjuntos de gemas* aislados por tanto no se necesitará gestor de dependencias. Es bastante intrusiva modificando la shell para funcionar, un ejemplo de es intrusismo es que sobreescribe comandos de la shell como cd, esto puede ser peligroso y propenso a errores . A nivel de velocidad al ser una herramienta más pesada puede ser más lenta, Está pensada para desarrolladores que necesitan una solución todo en uno muy útil si trabajas en múltiples proyectos con diferentes dependencias.
+
+**Algunas aclaraciones:**
+- **Gema**: librerías de código en ruby empaquetada para añadir nuevas funcionalidades.
+- **Gemsets**: los gemsets no son características de **ruby** si no de **RVM*, y son entornos de gemas aislados, para evitar problemas con dependencias.
+
+Teniendo en cuenta todo lo anterior me he decidido por **rbenv** debido a ser una herramienta más ligera, rápida, no es tan intrusiva evitandome los problemas que puede producir RVM, además de ser el estandar actual.
+
+También me gustaría mencionar a **asdf** que es un gestor multilenguaje pero lo descarté antes de la comparación porque quería usar el estandar.
+
+### INSTALACIÓN Y USO 
+- Para instalarlo he seguido la siguiente [referencia](https://github.com/rbenv/rbenv?tab=readme-ov-file).
+- Comandos para [usarlo](https://hexmos.com/freedevtools/tldr/common/rbenv/).
+
+### BIBLIOGRAFÍA
+He usado dos referencias de comparaciones entre **rvenb y RVM**.
+- [Link 1](https://dev.to/lovestaco/rbenv-vs-rvm-picking-your-ruby-version-manager-buddy-4130#:~:text=If%20you%20want%20an%20all,RVM%20is%20a%20solid%20pick.).
+- [Link 2](https://www.mindfiresolutions.com/blog/2018/01/rbenv-vs-rvm/)
+
+
+
+
+    
+
+
+
+
