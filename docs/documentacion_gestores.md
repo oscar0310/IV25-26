@@ -30,7 +30,7 @@ Para trabajar con **ruby** a la hora de elegir un gestor de versiones , se suele
 - **Gema**: librerías de código en ruby empaquetada para añadir nuevas funcionalidades.
 - **Gemsets**: los gemsets no son características de **ruby** si no de **RVM*, y son entornos de gemas aislados, para evitar problemas con dependencias.
 
-Teniendo en cuenta todo lo anterior me he decidido por **rbenv** debido a ser una herramienta más ligera, rápida, no es tan intrusiva evitandome los problemas que puede producir RVM, además de ser el estandar actual.
+Teniendo en cuenta todo lo anterior me he decidido por **rbenv** debido a ser una herramienta más ligera, rápida, no es tan intrusiva evitandome los problemas que puede producir RVM, además de ser el [estandar actual](https://www.ruby-toolbox.com/categories/ruby_version_management).
 
 También me gustaría mencionar a **asdf** que es un gestor multilenguaje pero lo descarté antes de la comparación porque quería usar el estandar.
 
@@ -43,10 +43,23 @@ He usado dos referencias de comparaciones entre **rvenb y RVM**.
 - [Link 1](https://dev.to/lovestaco/rbenv-vs-rvm-picking-your-ruby-version-manager-buddy-4130#:~:text=If%20you%20want%20an%20all,RVM%20is%20a%20solid%20pick.).
 - [Link 2](https://www.mindfiresolutions.com/blog/2018/01/rbenv-vs-rvm/)
 
+En todo proyecto se instalan muchas bibliotecas ( en el caso de **ruby gems** ), estas bibliotecas tienen versiones y dependencias, con las que hay que tratar y se tienen que instalar de la mejor forma. Para esto hay herramientas que se encargan de hacerlo **los gestores de dependencias**.
 
+## GESTORES DE DEPENDENCIAS.
 
+Un **gestor de dependencias** es el encargado de descargar, instalar y configurar software de terceros que tu proyecto necesita para funcionar, garantizando crear un entorno para que funcione el proyecto.
 
-    
+A la hora de elegir el gestor de dependencias en **ruby**, no hay mucha controversia en cual elegir, siguiendo el [estandar](https://www.ruby-toolbox.com/categories/dependency_management) como en el caso anterior sería **Bundler**. Se puede observar en el enlace que en la gráfica no se usa ningún otro.
+
+Antiguamente había debate en cual usar si Bundler o RVM gemsets, pero RVN gemsets en sí no se puede considerar un gestor de dependencias, lo único que hace es aislar las gemas pero no trata con las dependencias .
+
+### INSTALACION Y USO.
+
+Bundler viene instalado por defecto en en cualquier distribución moderna de Ruby por tanto solo habría que seguir la guía de su uso de la [Documentación oficial](https://bundler.io/).
+
+### BIBLIOGRAFÍA:
+- [Referencia de por qué usar Bundler en lugar de RVN Gemsets](https://www.engineyard.com/blog/do-we-still-need-rvm-gemsets/)
+
 
 
 
