@@ -1,6 +1,6 @@
 require 'set'
 
-module GeneradorHorarios
+module GeneradorHorario
   module Dominio
     class Horario
       attr_reader :asignaciones

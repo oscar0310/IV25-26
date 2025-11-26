@@ -1,4 +1,4 @@
-module GeneradorHorarios
+module GeneradorHorario
   module Dominio
     class DiaNoValido < ArgumentError; end
     class TurnoNoValido < ArgumentError; end
