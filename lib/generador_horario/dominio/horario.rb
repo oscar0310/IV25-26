@@ -3,17 +3,12 @@ require 'set'
 module GeneradorHorario
   module Dominio
     class Horario
-      attr_reader :asignaciones
+      attr_reader :trabajadores_en_seccion_dia_y_turno
 
       def initialize
-        @asignaciones = Hash.new { |hash, key| hash[key] = Set.new }
+        @trabajadores_en_seccion_dia_y_turno = Hash.new { |hash, key| hash[key] = Set.new }
       end
 
-      def agregar_empleado(dia, turno, seccion, empleado)
-      end
-
-      def obtener_empleados(dia, turno, seccion)
-      end
     end
   end
 end
