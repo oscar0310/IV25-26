@@ -1,2 +1,2 @@
 lenguaje: ruby
-entidad: lib/placeholder.rb
+entidad: lib/generador_horario/dominio/horario.rb
