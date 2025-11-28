@@ -20,19 +20,19 @@ Una vez elegido el lenguaje hay que centrarse en que versión instalar para desp
 
 El gestor de versiones nos permite tener varias versiones de un mismo lenguaje en la misma máquina podiendo variar entre ellas gracias a él.
 
-Para trabajar con **ruby** a la hora de elegir un gestor de versiones , se suele hablar de dos solo disponibles para el propio lenguaje. Estos son **rbenv** que es el estandar moderno, **RVM** que es el clásico. Vamos a enumerar pros y contras para decantarnos por uno:
+Para trabajar con **ruby** a la hora de elegir un gestor de versiones me he fijado en : **rbenv** que es el estandar moderno, **RVM** que es el clásico. Vamos a enumerar pros y contras para decantarnos por uno fijandonos en lo siguientes factores:
+    - En la velocidad.
+    - Deuda Técnica.
+    - Estandar actual
 
-- **rvenb**: es una herramienta ligera, esta herramienta sigue la fiosofía de hacer una sola cosa pero bien ( gestionar y cambiar entre versiones) por tanto es una herramienta muy minimalista . Esta herramienta no gestiona las gemsets* por tanto hay que usar un gestor de dependencias y no realizará ninguna modificación en la shell, por tanto es menos intrusivo que RVM ( se explicará en su apartado por qué es intrusivo). Hablando de la velocidad al ser una herramienta ligera y minimalista es bastante rápida. Está pensado para Desarrolladores que buscan simplicidad y no tienen problemas con buscar una herramienta que gestione las dependencias.
+En la velocidad nos fijaremos en que para cambiar de versión Rbenv es muho más rápido que RVM, ya que Rbenv sigue la idea de "hacer una sola cosa bien" haciendolo una herramienta menos pesada, mientras que RVM es una herramienta todo en uno siendo muy pesada.
 
-- **RVM**: Al contrario que rvenb no es una herraienta ligera, si no que es una herramienta todo en uno se podría decir que es un gestor del entorno completo. Esta herramienta si gestiona los gemsets* teniendo conjuntos de gemas* aislados por tanto no se necesitará gestor de dependencias. Es bastante intrusiva modificando la shell para funcionar, un ejemplo de es intrusismo es que sobreescribe comandos de la shell como cd, esto puede ser peligroso y propenso a errores . A nivel de velocidad al ser una herramienta más pesada puede ser más lenta, Está pensada para desarrolladores que necesitan una solución todo en uno muy útil si trabajas en múltiples proyectos con diferentes dependencias.
+Hablando de la deuda técnica RVM puede acarrear bastantes problemas de cara al futuro, debido a que para cambiar de versión RVM carga una gran cantidad de variables de entorno que pueden generar conflicto con otras herramientas, mientras que Rbenv modifica el PATH con la versión seleccionada.
 
-**Algunas aclaraciones:**
-- **Gema**: librerías de código en ruby empaquetada para añadir nuevas funcionalidades.
-- **Gemsets**: los gemsets no son características de **ruby** si no de **RVM*, y son entornos de gemas aislados, para evitar problemas con dependencias.
+En el [estandar actual](https://www.ruby-toolbox.com/categories/ruby_version_management) la más utilizada es Rbenv.
 
-Teniendo en cuenta todo lo anterior me he decidido por **rbenv** debido a ser una herramienta más ligera, rápida, no es tan intrusiva evitandome los problemas que puede producir RVM, además de ser el [estandar actual](https://www.ruby-toolbox.com/categories/ruby_version_management).
+Teniendo en cuenta todo esto me he decidico por utilizar Rbenv, ya que es mucho más rápida, de cara al futuro tendremos menos problemas y es el estandar actual.
 
-También me gustaría mencionar a **asdf** que es un gestor multilenguaje pero lo descarté antes de la comparación porque quería usar el estandar.
 
 ### INSTALACIÓN Y USO 
 - Para instalarlo he seguido la siguiente [referencia](https://github.com/rbenv/rbenv?tab=readme-ov-file).
