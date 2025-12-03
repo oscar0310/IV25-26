@@ -39,8 +39,6 @@ Para más información con justificación de elección y pequeños turiales de c
 - Para ejecutar todas las tareas
 >bundle exec rake 
 
-- Para ejecutar la tarea que chequea la sintaxis de las entidades
->bundle exec rake check
- 
+
 
 

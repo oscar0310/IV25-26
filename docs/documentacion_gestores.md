@@ -31,7 +31,7 @@ Hablando de la deuda técnica RVM puede acarrear bastantes problemas de cara al 
 
 En el [estandar actual](https://www.ruby-toolbox.com/categories/ruby_version_management) la más utilizada es Rbenv.
 
-Teniendo en cuenta todo esto me he decidico por utilizar Rbenv, ya que es mucho más rápida, de cara al futuro tendremos menos problemas y es el estandar actual.
+Teniendo en cuenta todo esto me he decidido por utilizar Rbenv, ya que es mucho más rápida, de cara al futuro tendremos menos problemas y es el estandar actual.
 
 
 ### INSTALACIÓN Y USO 
@@ -51,7 +51,7 @@ Un **gestor de dependencias** es el encargado de descargar, instalar y configura
 
 A la hora de elegir el gestor de dependencias en **ruby**, no hay mucha controversia en cual elegir, siguiendo el [estandar](https://www.ruby-toolbox.com/categories/dependency_management) como en el caso anterior sería **Bundler**. Se puede observar en el enlace que en la gráfica no se usa ningún otro.
 
-Antiguamente había debate en cual usar si Bundler o RVM gemsets, pero RVN gemsets en sí no se puede considerar un gestor de dependencias, lo único que hace es aislar las gemas pero no trata con las dependencias .
+Antiguamente había debate en cual usar si Bundler o RVM gemsets, pero RVN gemsets en sí no se puede considerar un gestor de dependencias, lo único que hace es aislar las gemas pero no trata con las dependencias.
 
 ### INSTALACION Y USO.
 
