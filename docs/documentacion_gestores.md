@@ -49,16 +49,12 @@ En todo proyecto se instalan una gran cantidad de bibliotecas ( en el caso de **
 
 Un **gestor de dependencias** es el encargado de descargar, instalar y configurar software de terceros que tu proyecto necesita para funcionar, garantizando crear un entorno para que funcione el proyecto.
 
-A la hora de elegir el gestor de dependencias en **ruby**, no hay mucha controversia en cual elegir, siguiendo el [estandar](https://www.ruby-toolbox.com/categories/dependency_management) como en el caso anterior sería **Bundler**. Se puede observar en el enlace que en la gráfica no se usa ningún otro.
+A la hora de elegir el gestor de dependencias en **ruby**, No hay una gran cantidad donde elegir , podemos hablar del estandar que es [Bundler](https://bundler.io/), [Gel](https://github.com/gel-rb/gel) y podemos mencionar a [rv](https://github.com/spinel-coop/rv), que actualmente en la fecha de realización de este proyecto, es solo un gestor de versiones pero en un futuro promete ser una herremienta todo en uno, muy a tener en cuenta.
 
-Antiguamente había debate en cual usar si Bundler o RVM gemsets, pero RVN gemsets en sí no se puede considerar un gestor de dependencias, lo único que hace es aislar las gemas pero no trata con las dependencias.
+Como criterio de elección nos vamos a centrar en el que menor deuda técnica ofrezca, Gel es una herramienta bastante desactualizada, la versión que te instala gem es la 0.3 (la última estable) la cual usa el métododo **use_gemdeps** que se eliminó a partir de la versión 3 de Ruby por tanto esto nos imposibilita usarlo, pese a ser más rápido que Bundler como se describe en su repositorio, por tanto nos quedamos con el estandar que acarreara una menor cantidad de problemas.
 
-### INSTALACION Y USO.
-
-Bundler viene instalado por defecto en en cualquier distribución moderna de Ruby por tanto solo habría que seguir la guía de su uso de la [Documentación oficial](https://bundler.io/).
-
-### BIBLIOGRAFÍA:
-- [Referencia de por qué usar Bundler en lugar de RVN Gemsets](https://www.engineyard.com/blog/do-we-still-need-rvm-gemsets/)
+### INSTALACIÓN Y USO
+- Para instalarlo y usarlo he usado [la guia oficial](https://bundler.io/).
 
 En cualquier proyecto nos encontramos con el problema de que existen tareas que se repiten como son ejecutar los test, compilar, limpiar archivos temporales, es aquí donde entran los **gestores de tareas**
 
