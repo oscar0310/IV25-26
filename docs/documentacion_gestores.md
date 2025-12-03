@@ -61,7 +61,7 @@ En cualquier proyecto nos encontramos con el problema de que existen tareas que 
 ## GESTORES DE TAREAS
 Un **gestor de tareas** es el encargado de ralizar estas tareas tan repetitivas, estas operaciones se definen en un fichero, permitiendo que se ejecuten con un simple comando.
 
-En ruby existen varias opciones en gestores de tareas, **como son Rake, Thor y Make**, a la hora de elegir me he centrado primero en el estandar, la curva de aprendizaje y como interactuan con el proyecto. En cuanto a la curva de aprendizaje, **Make** sería el más tedioso porque tendríamos que usar el lenguaje de la shell de linux, mientras que **Thor y Rake** usan ruby ganando puntos a favor. A la hora de interactuar con el proyecto **Rake** es lo que buscamos, debido a que con un rakefile en el proyecto podemos automatizar las tareas mientras que **Thor** es más bien una herramienta para usar scripts entre varios proyectos que no es lo que buscamos. En cuanto al estandar [Rake](https://www.ruby-toolbox.com/projects/rake) sigue siendo mucho más usado que [Thor](https://www.ruby-toolbox.com/projects/thor), siendo el estandar actual.
+En ruby existen varias opciones en gestores de tareas, **como son Rake, Thor y Make**, a la hora de elegir me he centrado primero en el estandar y deuda técnica. En cuanto a la deuda técnica, **Make** usa el lenguaje de la shell de linux teniendo que obligar a quien trabajae en el proyecto a conocerla, mientras que **Thor y Rake** usan ruby. En cuanto al estandar [Rake](https://www.ruby-toolbox.com/projects/rake) sigue siendo mucho más usado que [Thor](https://www.ruby-toolbox.com/projects/thor), siendo el estandar actual.
 
 Teniendo en cuenta esto y siguiendo la metodología usada en las otras elecciones me he quedado con el estandar que es **Rake**.
 
@@ -85,7 +85,7 @@ Para ello tenemos que crear un Rakefile, yo para crearlo he seguido estas guias:
     - [Rake and Project Automatomatitation](https://graceful.dev/courses/the-freebies/modules/rake-and-project-automation/).
     - [What us Rake In Ruby y How To Use it](https://www.rubyguides.com/2019/02/ruby-rake/).
 
-Y ejecutarlo junto a bunler para tener en cuenta las dependencias:
+Y ejecutarlo junto a bundler para tener en cuenta las dependencias:
 
 >bundle exec rake < Opcional: nombre de tarea>
 
