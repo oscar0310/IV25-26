@@ -20,18 +20,20 @@ Una vez elegido el lenguaje hay que centrarse en que versión instalar para desp
 
 El gestor de versiones nos permite tener varias versiones de un mismo lenguaje en la misma máquina podiendo variar entre ellas gracias a él.
 
-Para trabajar con **ruby** a la hora de elegir un gestor de versiones me he fijado en : **rbenv** que es el estandar moderno, **RVM** que es el clásico. Vamos a enumerar pros y contras para decantarnos por uno fijandonos en lo siguientes factores:
+Para trabajar con **ruby** a la hora de elegir un gestor de versiones me he fijado en : **rbenv** que es el estandar moderno, **RVM** que es el clásico y **rv** una nueva herramienta todo en uno aunque actualmente solo gestiona versiones. Vamos a enumerar pros y contras para decantarnos por uno fijandonos en lo siguientes factores:
     - En la velocidad.
     - Deuda Técnica.
     - Estandar actual
 
-En la velocidad nos fijaremos en que para cambiar de versión Rbenv es muho más rápido que RVM, ya que Rbenv sigue la idea de "hacer una sola cosa bien" haciendolo una herramienta menos pesada, mientras que RVM es una herramienta todo en uno siendo muy pesada.
+En la velocidad nos fijaremos en que para cambiar de versión Rbenv es muho más rápido que RVM, ya que Rbenv sigue la idea de "hacer una sola cosa bien" haciendolo una herramienta menos pesada, mientras que RVM es una herramienta todo en uno siendo muy pesada. Teniendo en cuenta que Rbenv es más rápida que RVN, rv en su repositorio demuestra que es más rápida que Rbenv con un benchmark.
 
-Hablando de la deuda técnica RVM puede acarrear bastantes problemas de cara al futuro, debido a que para cambiar de versión RVM carga una gran cantidad de variables de entorno que pueden generar conflicto con otras herramientas, mientras que Rbenv modifica el PATH con la versión seleccionada.
+Hablando de la deuda técnica RVM puede acarrear bastantes problemas de cara al futuro, debido a que para cambiar de versión RVM carga una gran cantidad de variables de entorno que pueden generar conflicto con otras herramientas, mientras que Rbenv modifica el PATH con la versión seleccionada. rv al ser tan nueva actualmente no dispone de las últimas versiones para ser instaladas la cual son necesarias para testear:
+
+![Versiones](../docs/versionesrv.png)
 
 En el [estandar actual](https://www.ruby-toolbox.com/categories/ruby_version_management) la más utilizada es Rbenv.
 
-Teniendo en cuenta todo esto me he decidido por utilizar Rbenv, ya que es mucho más rápida, de cara al futuro tendremos menos problemas y es el estandar actual.
+Teniendo en cuenta todo esto me he decidido por utilizar Rbenv, ya que es mucho más rápida que RVN , de cara al futuro tendremos menos problemas y es el estandar actual.
 
 
 ### INSTALACIÓN Y USO 
@@ -42,6 +44,7 @@ Teniendo en cuenta todo esto me he decidido por utilizar Rbenv, ya que es mucho 
 He usado dos referencias de comparaciones entre **rvenb y RVM**.
 - [Link 1](https://dev.to/lovestaco/rbenv-vs-rvm-picking-your-ruby-version-manager-buddy-4130#:~:text=If%20you%20want%20an%20all,RVM%20is%20a%20solid%20pick.).
 - [Link 2](https://www.mindfiresolutions.com/blog/2018/01/rbenv-vs-rvm/)
+Y como referencia de **rv** el [repositorio](https://github.com/spinel-coop/rv?tab=readme-ov-file#install-benchmark).
 
 En todo proyecto se instalan una gran cantidad de bibliotecas ( en el caso de **ruby gems** ), estas bibliotecas tienen versiones y dependencias, con las que hay que tratar y se tienen que instalar de la mejor forma. Para esto hay herramientas que se encargan de hacerlo **los gestores de dependencias**.
 
