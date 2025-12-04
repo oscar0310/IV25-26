@@ -42,9 +42,12 @@ En todo proyecto se instalan una gran cantidad de bibliotecas ( en el caso de **
 
 Un **gestor de dependencias** es el encargado de descargar, instalar y configurar software de terceros que tu proyecto necesita para funcionar, garantizando crear un entorno para que funcione el proyecto.
 
-A la hora de elegir el gestor de dependencias en **ruby**, No hay una gran cantidad donde elegir , podemos hablar del estandar que es [Bundler](https://bundler.io/), [Gel](https://github.com/gel-rb/gel) y podemos mencionar a [rv](https://github.com/spinel-coop/rv), que actualmente en la fecha de realización de este proyecto, es solo un gestor de versiones pero en un futuro promete ser una herremienta todo en uno, muy a tener en cuenta.
+A la hora de elegir el gestor de dependencias en **ruby**, No hay una gran cantidad donde elegir , podemos hablar del estandar que es [Bundler](https://bundler.io/), [Gel](https://github.com/gel-rb/gel) y podemos mencionar a [rv](https://github.com/spinel-coop/rv), que actualmente en la fecha de realización de este proyecto, es solo un gestor de versiones pero en un futuro promete ser una herramienta todo en uno, muy a tener en cuenta.
 
-Como criterio de elección nos vamos a centrar en la herramienta provoque menos problemas, Gel es una herramienta bastante desactualizada, la versión que te instala gem es la 0.3 (la última estable) la cual usa el métododo **use_gemdeps** que se eliminó a partir de la versión 3 de Ruby por tanto esto nos imposibilita usarlo, pese a ser más rápido que Bundler como se describe en su repositorio, por tanto nos quedamos con el estandar que acarreara una menor cantidad de problemas.
+Para el gestor de dependencias vamos a usar como Criterio la última vez que se actualizó, una herramienta desactualizada acarreará problemas para gestionar dependencias en las versiones nuevas del lenguaje, Bundler se actualizó por última vez el [3 de diciembre de 2025](https://rubygems.org/gems/bundler/versions?locale=es), mientras que Gel en [2022](https://rubygems.org/gems/gel/versions/0.3.0). Un ejemplo de problema que acarrea Gel es que para gestionar las dependencias de versiones nuevas no funciona:
+![Problema](../docs/problemagel.png)
+
+Por tanto nos quedamos con el estandar Bundler.
 
 ### INSTALACIÓN Y USO
 - Para instalarlo y usarlo he usado [la guia oficial](https://bundler.io/).
