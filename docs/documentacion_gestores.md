@@ -22,12 +22,12 @@ El gestor de versiones nos permite tener varias versiones de un mismo lenguaje e
 
 Para trabajar con **ruby** a la hora de elegir un gestor de versiones me he fijado en : **rbenv** que es el estandar moderno, **RVM** que es el clásico y **rv** una nueva herramienta todo en uno aunque actualmente solo gestiona versiones. Vamos a enumerar pros y contras para decantarnos por uno fijandonos en lo siguientes factores:
     - En la velocidad.
-    - Deuda Técnica.
+    - La herramienta que menor número de problemas pueda provocar en el futuro.
     - Estandar actual
 
 En la velocidad nos fijaremos en que para cambiar de versión Rbenv es muho más rápido que RVM, ya que Rbenv sigue la idea de "hacer una sola cosa bien" haciendolo una herramienta menos pesada, mientras que RVM es una herramienta todo en uno siendo muy pesada. Teniendo en cuenta que Rbenv es más rápida que RVN, rv en su repositorio demuestra que es más rápida que Rbenv con un benchmark.
 
-Hablando de la deuda técnica RVM puede acarrear bastantes problemas de cara al futuro, debido a que para cambiar de versión RVM carga una gran cantidad de variables de entorno que pueden generar conflicto con otras herramientas, mientras que Rbenv modifica el PATH con la versión seleccionada. rv al ser tan nueva actualmente no dispone de las últimas versiones para ser instaladas la cual son necesarias para testear:
+RVM puede acarrear bastantes problemas de cara al futuro, debido a que para cambiar de versión RVM carga una gran cantidad de variables de entorno que pueden generar conflicto con otras herramientas, mientras que Rbenv modifica el PATH con la versión seleccionada. rv al ser tan nueva actualmente no dispone de las últimas versiones para ser instaladas la cual son necesarias para testear:
 
 ![Versiones](../docs/versionesrv.png)
 
@@ -54,7 +54,7 @@ Un **gestor de dependencias** es el encargado de descargar, instalar y configura
 
 A la hora de elegir el gestor de dependencias en **ruby**, No hay una gran cantidad donde elegir , podemos hablar del estandar que es [Bundler](https://bundler.io/), [Gel](https://github.com/gel-rb/gel) y podemos mencionar a [rv](https://github.com/spinel-coop/rv), que actualmente en la fecha de realización de este proyecto, es solo un gestor de versiones pero en un futuro promete ser una herremienta todo en uno, muy a tener en cuenta.
 
-Como criterio de elección nos vamos a centrar en el que menor deuda técnica ofrezca, Gel es una herramienta bastante desactualizada, la versión que te instala gem es la 0.3 (la última estable) la cual usa el métododo **use_gemdeps** que se eliminó a partir de la versión 3 de Ruby por tanto esto nos imposibilita usarlo, pese a ser más rápido que Bundler como se describe en su repositorio, por tanto nos quedamos con el estandar que acarreara una menor cantidad de problemas.
+Como criterio de elección nos vamos a centrar en la herramienta provoque menos problemas, Gel es una herramienta bastante desactualizada, la versión que te instala gem es la 0.3 (la última estable) la cual usa el métododo **use_gemdeps** que se eliminó a partir de la versión 3 de Ruby por tanto esto nos imposibilita usarlo, pese a ser más rápido que Bundler como se describe en su repositorio, por tanto nos quedamos con el estandar que acarreara una menor cantidad de problemas.
 
 ### INSTALACIÓN Y USO
 - Para instalarlo y usarlo he usado [la guia oficial](https://bundler.io/).
@@ -64,7 +64,7 @@ En cualquier proyecto nos encontramos con el problema de que existen tareas que 
 ## GESTORES DE TAREAS
 Un **gestor de tareas** es el encargado de ralizar estas tareas tan repetitivas, estas operaciones se definen en un fichero, permitiendo que se ejecuten con un simple comando.
 
-En ruby existen varias opciones en gestores de tareas, **como son Rake, Thor y Make**, a la hora de elegir me he centrado primero en el estandar y deuda técnica. En cuanto a la deuda técnica, **Make** usa el lenguaje de la shell de linux teniendo que obligar a quien trabajae en el proyecto a conocerla, mientras que **Thor y Rake** usan ruby. En cuanto al estandar [Rake](https://www.ruby-toolbox.com/projects/rake) sigue siendo mucho más usado que [Thor](https://www.ruby-toolbox.com/projects/thor), siendo el estandar actual.
+En ruby existen varias opciones en gestores de tareas, **como son Rake, Thor y Make**, a la hora de elegir me he centrado primero en el estandar y en la perdida de tiempo aprendiendo aprendiendo un nuevo lenguaje para usarla. En cuanto a la perdida de tiempo, **Make** usa el lenguaje de la shell de linux teniendo que obligar a quien trabaja en el proyecto a conocerla, mientras que **Thor y Rake** usan ruby. En cuanto al estandar [Rake](https://www.ruby-toolbox.com/projects/rake) sigue siendo mucho más usado que [Thor](https://www.ruby-toolbox.com/projects/thor), siendo el estandar actual.
 
 Teniendo en cuenta esto y siguiendo la metodología usada en las otras elecciones me he quedado con el estandar que es **Rake**.
 
