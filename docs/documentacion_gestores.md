@@ -57,9 +57,7 @@ En cualquier proyecto nos encontramos con el problema de que existen tareas que 
 ## GESTORES DE TAREAS
 Un **gestor de tareas** es el encargado de ralizar estas tareas tan repetitivas, estas operaciones se definen en un fichero, permitiendo que se ejecuten con un simple comando.
 
-En ruby existen varias opciones en gestores de tareas, **como son Rake, Thor y Make**, a la hora de elegir me he centrado primero en el estandar y en la perdida de tiempo aprendiendo aprendiendo un nuevo lenguaje para usarla. En cuanto a la perdida de tiempo, **Make** usa el lenguaje de la shell de linux teniendo que obligar a quien trabaja en el proyecto a conocerla, mientras que **Thor y Rake** usan ruby. En cuanto al estandar [Rake](https://www.ruby-toolbox.com/projects/rake) sigue siendo mucho más usado que [Thor](https://www.ruby-toolbox.com/projects/thor), siendo el estandar actual.
-
-Teniendo en cuenta esto y siguiendo la metodología usada en las otras elecciones me he quedado con el estandar que es **Rake**.
+En ruby existen varias opciones en gestores de tareas, **como son Rake, Bake, Task, Just y Make**, a la hora de elegir me he centrado en una herramienta que esté integrada en el ecosistema ruby como son Rake y Bake, ambas cumplen el criterio pero me he decantado por **Rake** por ser el estandar.
 
 ### INSTALACION Y USO.
 
@@ -90,8 +88,7 @@ Todos las opciones de comandos de Rake vienen [aquí](https://ruby.github.io/rak
 
 ### BIBLIOGRAFÍA
 - [Link Documentación Rake](https://ruby.github.io/rake/).
-- [Link Documentación Thor](http://whatisthor.com/).
-- [Comparación entre Rake y Thor](https://stackoverflow.com/questions/3524296/rake-vs-thor-for-automation-scripts)
+
 
 
 
