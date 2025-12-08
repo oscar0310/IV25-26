@@ -43,3 +43,6 @@ Para más información con justificación de elección y pequeños turiales de c
 >bundle exec rake check
 
 
+### TESTS:
+
+Para saber por que se ha elegido la herramienta para los tests: [justificación](docs/documentacion_test.md).
