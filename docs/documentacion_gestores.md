@@ -30,10 +30,12 @@ En cualquier proyecto nos encontramos con el problema de que existen tareas que 
 ## GESTORES DE TAREAS
 Un **gestor de tareas** es el encargado de realizar estas tareas tan repetitivas, estas operaciones se definen en un fichero, permitiendo que se ejecuten con un simple comando.
 
+Como criterio para elegir establecemos que la herramienta que vamos a usar esté integrada en el ecosistema ruby y dentro de esas herramientas nos quedaremos con el estandar de facto.
+
 En ruby existen varias opciones en gestores de tareas, podemos hablar de herramientas integradas en el ecositema Ruby como son [Rake](https://ruby.github.io/rake/) siendo una gema de ruby, la cual podríamos instalar con Bundler y es actualmente el estandar de [facto](https://www.ruby-toolbox.com/projects/rake) al ser la herramienta más dominante y usada en cuanto a gestores de tareas en ruby, [Bake](https://ioquatix.github.io/bake/) es otra gema la cual puede ser intalada tambien con Bundler. Herramientas externas al ecosistema ruby como son [Task](https://taskfile.dev/) y [Just](https://github.com/casey/just) que son herramientas  multiplataforma insparada en Make y por último [Make](https://www.gnu.org/software/make/manual/make.html) el estandar actual de linux viniendo instalada por defecto en todas las distribuciones de linux. 
 
 
-A la hora de elegir he establecido como criterio que la herramienta que vamos a usar esté integrada en el ecosistema ruby y dentro de esas herramientas nos quedaremos con el estandar de facto. Esto descartaría tanto a Just, Task y Make que son herramientas externas. Y nos dejaría a Bake y Rake ambas cumplen la condición de estar integradas en el ecosistema ruby, siendo gems del propio lenguaje, pero para quedarnos con una usamos el criterio del estandar de facto el cual es Rake.
+Siguiendo el criterio de que la herramienta esté integrada en el ecosistema de ruby, descartaría tanto a Just, Task y Make que son herramientas externas. Y nos dejaría a Bake y Rake ambas cumplen la condición de estar integradas en el ecosistema ruby, siendo gems del propio lenguaje, pero para quedarnos con una usamos el criterio del estandar de facto el cual es Rake.
 
 
 
