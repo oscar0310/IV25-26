@@ -1,10 +1,10 @@
 # DOCUMENTACIÓN DE GESTORES:
 
-En los proyectos siempre hay una serie de tareas que se llevan a cabo de forma muy repetitiva, aquí es donde entran los gestores, estos son los encargados de gestionar y realizar estas actividades tan repetitivas. Pero antes de esto se necesita haber escogído el lenguaje , porque cada lenguaje dispone de diferentes opciones en gestores.
+En los proyectos siempre hay una serie de tareas que se llevan a cabo de forma muy repetitiva, aquí es donde entran los gestores, estos son los encargados de gestionar y realizar estas actividades tan repetitivas. Pero antes de esto se necesita haber escogído el lenguaje, porque cada lenguaje dispone de diferentes opciones en gestores.
 
 Para ello tenemos que partir del lenguaje escogido para este proyecto el cual es **ruby**.
 
-En todo proyecto se instalan una gran cantidad de bibliotecas ( en el caso de **ruby gems** ), estas bibliotecas tienen versiones y dependencias, con las que hay que tratar y se tienen que instalar de la mejor forma. Para esto hay herramientas que se encargan de hacerlo **los gestores de dependencias**.
+En todo proyecto se instalan una gran cantidad de bibliotecas (en el caso de **ruby gems**), estas bibliotecas tienen versiones y dependencias, con las que hay que tratar y se tienen que instalar de la mejor forma. Para esto hay herramientas que se encargan de hacerlo **los gestores de dependencias**.
 
 ## GESTORES DE DEPENDENCIAS.
 
