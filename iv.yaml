@@ -1,2 +1,5 @@
 lenguaje: ruby
 entidad: lib/generador_horario/dominio/horario.rb
+automatizar:
+  fichero: Rakefile
+  orden: bundle exec rake
