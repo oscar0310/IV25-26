@@ -1,3 +1,5 @@
+require_relative "generador_horario.rb"
+require_relative "dominio/errores.rb"
 module GeneradorHorario
     module_function
      def comprobar_ext(archivo)
@@ -15,4 +17,9 @@ module GeneradorHorario
         end
     end
 
+    def comprobar_Seccion(seccion)
+        unless SECCIONES_VALIDAS.include?(seccion)
+         raise Dominio::SeccionNoValida, "La sección #{seccion} pasada en el archivo de entrada no es una sección valida, las secciones validas son: #{SECCIONES_VALIDAS.join(', ')}"  
+        end 
+    end
 end
