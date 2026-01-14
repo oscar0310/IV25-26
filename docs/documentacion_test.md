@@ -3,15 +3,17 @@
 Para asegurarnos de que el desarrollo del proyecto cumple todos los deseos del cliente, necesitamos realizar test. Los test son los encargados de verificar que se cumplen estos requisitios. Estas herramientas se dividen en varios niveles de abstracción para ello vamos a ir viendo los diferenetes niveles y nos quedaremos con una herramienta en cada nivel.
 
 ## Nivel de Aserciones:
-Este es el nivel más bajo de abstracción, son funciones que se encargan de comparar la salida obtenida con la deseada. Como criterio de elección se busca que la herramienta sea el estándar de facto.
+Este es el nivel más bajo de abstracción, son funciones que se encargan de comparar la salida obtenida con la deseada.
+
+Como criterio de elección se busca que la librería de aserciones siga el estilo TDD clásico (assert_equal(esperado,valor_actual)) priorizandolo frente al estilo BDD(expect.(actual).to_eq(experado)) y no se requiera instalar gemas externas adicionales para su uso, evitando tener que añadir archivos de configuración adicionales.
 
 En ruby tenemos varias opciones en cuanto a librería de aserciones:
 
-- [Minitest::Assertions](https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html) es la librería de aserciones que viene por defecto con Minitest sigue el estilo clásico de aserciones aunque también se puede usar el estilo [BDD](https://minite.st/index.html).
-- [RSpec Expectations](https://rspec.info/documentation/3.12/rspec-expectations/) es la librería de aserciones que viene con RSpec y sigue el estilo BDD.
-- [Test::Unit::Assertions](https://test-unit.github.io/test-unit/en/Test/Unit/Assertions.html) es la librería de aserciones que viene con Test::Unit y sigue el estilo clásico de aserciones.
+- [Minitest::Assertions](https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html) es la librería de aserciones que viene por defecto con Minitest esta sigue el estilo clásico de las aserciones como podemos ver en funciones como assert_equal(exp, act, msg = nil) o assert_empty(obj, msg = nil). Esta librería no requiere instalar gemas externas adicionales ya que viene incluida en la librería estándar de ruby.
+- [RSpec Expectations](https://rspec.info/documentation/3.12/rspec-expectations/) es la librería de aserciones del ecosistema RSpec. Sigue el estilo BDD, utilizando cadenas que intentas parecerse al inglés como podemos ver en su documentación con ejemplos como: expect(actual).to_be(expected) o expect(actual).to_match(/expresion/). Esta librería requiere instalar gemas externas adicionales y necesita configuración adicional para su uso.
+- [Test::Unit::Assertions](https://test-unit.github.io/test-unit/en/Test/Unit/Assertions.html) es la librería de aserciones que viene con Test::Unit y es el padre del estilo clásico de aserciones TDD en ruby. Esta librería anteriormente era el estándar en ruby pero actualmente si se quiere usar se necesita instalar gemas externas adicionales ya que ya no viene incluida en la librería estandar de ruby y necesita configuración adicional para su uso.
 
-Siguiendo el criterio de elección nos quedamos con [Minitest::Assertions](https://www.ruby-toolbox.com/categories/testing_frameworks).
+Siguiendo los criterios de elección nos quedamos con [Minitest::Assertions](https://www.ruby-toolbox.com/categories/testing_frameworks) ya que sigue el estilo TDD y no requiere instalar gemas externas adicionales, evitando tener que añadir archivos de configuración adicionales.
 
 ## Nivel Test runners o frameworks:
 Este es el nivel intermedio de abstracción, esta herramienta se encarga de ejecutarlos, agruparlos y planificar los tests. También puede incluir fixtures o funciones para crear objetos que se van a utilizar. Como criterio de eleccion se busca que la herramienta que la herramienta sea el estándar de facto en ruby y que destaque por su velocidad.
