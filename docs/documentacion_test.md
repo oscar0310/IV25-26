@@ -16,15 +16,17 @@ En ruby tenemos varias opciones en cuanto a librería de aserciones:
 Siguiendo los criterios de elección nos quedamos con [Minitest::Assertions](https://www.ruby-toolbox.com/categories/testing_frameworks) ya que sigue el estilo TDD y no requiere instalar gemas externas adicionales, evitando tener que añadir archivos de configuración adicionales.
 
 ## Nivel Test runners o frameworks:
-Este es el nivel intermedio de abstracción, esta herramienta se encarga de ejecutarlos, agruparlos y planificar los tests. También puede incluir fixtures o funciones para crear objetos que se van a utilizar. Como criterio de eleccion se busca que la herramienta que la herramienta sea el estándar de facto en ruby y que destaque por su velocidad.
+Este es el nivel intermedio de abstracción. Esta herramienta se encarga de ejecutarlos, agruparlos y planificar los tests. También puede incluir fixtures o funciones para crear objetos que se van a utilizar. 
+
+Como criterio de eleccion, buscamos  que la herramienta se integre correctamente con la librería de aserciones sin necesidad de configuraciones complejas y que destaque por su velocidad, mejorando la experiencia del programador cuando la use.
 
 En ruby tenemos varias opciones en cuanto a frameworks de test:
 
--[Minitest](https://minite.st/index.html) framework de test que viene por defecto incluida en el lenguaje, destaca por su velocidad.
--[Rspec-core](https://rspec.info/documentation/3.13/rspec-core/) framework de test muy popular en ruby que viene con el ecosistema RSpec, es bastante más lento que Minitest.
--[Test::Unit](https://test-unit.github.io/test-unit/en/Test.html) framework clásico de ruby, su rendimiento se situa en un punto intermedio es más lento que Minitest y más rápido que Rspec.
+-[Minitest](https://minite.st/index.html) es el framework de test que viene incluido por defecto incluida en el lenguaje, se integra de manera nativa con Minitest::Assertions ya que es su propia librería de aserciones y destaca por su velocidad ya que al tener una arquitectura minimalista basada en clases de ruby permite un arranque casi instantaneo.
+-[Rspec-core](https://rspec.info/documentation/3.13/rspec-core/) framework de test muy popular en ruby que viene con el ecosistema RSpec, Usarlo con Minitest::Assertions rompe las convenciones del framework ya que está preparado para usar RSpec Expectations. En cuanto a velocidadad es el más lento ya que sigue una arquitectura basada en DSLs (Domain Specific language) que añade una capa de abstracción adicional que penaliza la velocidad de ejecución.
+-[Test::Unit](https://test-unit.github.io/test-unit/en/Test.html) framework clásico de ruby, inicialemente Minitest y Test::Unit partían del mismo proyecto pero actualmente son bastantes diferentes por tanto se necesitarían una gran cantidad de configuraciones. Su rendimiento se situa en un punto intermedio es más lento que Minitest y más rápido que Rspec.
 
-Para compararlos en cuanto a la velocidad he usado las gráficas que proporciona Minitest en su [documentación](https://minite.st/comparisons.html), donde podemos observar que Minitest es el más rápido de los tres. Además siguiendo el otro criterio de elección el estándar de facto en ruby es [Minitest](https://www.ruby-toolbox.com/categories/testing_frameworks). Por tanto siguiendo los criterios de elección nos quedamos con Minitest.
+Para compararlos en cuanto a la velocidad, usamos las gráficas que proporciona Minitest en su [documentación](https://minite.st/comparisons.html), donde podemos observar que Minitest es el más rápido de los tres. Además siguiendo el otro criterio de elección nos quedamos con Minitest ya que se integra de manera nativa con Minitest::Assertions sin necesidad de configuraciones complejas las cuales no son necesarias.
 
 ## Nivel Herramientas CLI para ejecutar los tests:
 
