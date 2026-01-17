@@ -17,6 +17,14 @@ module GeneradorHorario
         trabajadores_set
     end
 
+    def obtener_datos_trabajador(linea)
+        columnas=linea.split(',')
+        nombre_trabajador=columnas[0].strip
+        seccion=columnas[1].strip.downcase.to_sym
+        comprobar_nTrabajador(nombre_trabajador)
+        comprobar_Seccion(seccion)
+    end
+
     def comprobar_ext(archivo)
         if File.extname(archivo) != ".csv"
             raise ArgumentError, "El archivo de con la información de los trabajadores debe ser .csv (se recibió: #{archivo})."
