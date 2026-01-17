@@ -24,8 +24,12 @@ module GeneradorHorario
         comprobar_nTrabajador(nombre_trabajador)
         comprobar_Seccion(seccion)
 
+        trabajador_obj=Dominio::Trabajador.new(nombre_trabajador)
+
         {
             id: id,
+            trabajdor: trabajador_obj,
+            seccion: seccion
         }
     end
 
