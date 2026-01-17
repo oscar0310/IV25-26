@@ -10,19 +10,23 @@ module GeneradorHorario
 
     def procesar_datos(file)
         trabajadores_set=Set.new[]
-        file.each do |linea|
-            datos_trabajador=obtener_datos_trabajador(linea)
+        file.each_with_index do |linea, id|
+            datos_trabajador=obtener_datos_trabajador(linea, id)
             trabajadores_set.add(datos_trabajador)
         end
         trabajadores_set
     end
 
-    def obtener_datos_trabajador(linea)
+    def obtener_datos_trabajador(linea, id)
         columnas=linea.split(',')
         nombre_trabajador=columnas[0].strip
         seccion=columnas[1].strip.downcase.to_sym
         comprobar_nTrabajador(nombre_trabajador)
         comprobar_Seccion(seccion)
+
+        {
+            id: id,
+        }
     end
 
     def comprobar_ext(archivo)
