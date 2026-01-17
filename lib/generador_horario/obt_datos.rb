@@ -1,6 +1,7 @@
 require_relative "generador_horario.rb"
 require_relative "dominio/errores.rb"
 require 'set'
+require "dominio/trabajador.rb"
 module GeneradorHorario
     module_function
 
