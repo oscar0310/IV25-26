@@ -4,5 +4,6 @@ module GeneradorHorario
     class TurnoNoValido < ArgumentError; end
     class SeccionNoValida < ArgumentError; end
     class EmpleadoYaAsignado < StandardError; end
+    class RequisitosNunMinPersonas < StandardError; end
   end
 end
