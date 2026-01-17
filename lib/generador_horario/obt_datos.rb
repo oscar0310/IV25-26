@@ -2,7 +2,12 @@ require_relative "generador_horario.rb"
 require_relative "dominio/errores.rb"
 module GeneradorHorario
     module_function
-     def comprobar_ext(archivo)
+    
+    def leer_archivo(archivo)
+        file=File.readlines(archivo).drop(1)
+    end
+
+    def comprobar_ext(archivo)
         if File.extname(archivo) != ".csv"
             raise ArgumentError, "El archivo de con la información de los trabajadores debe ser .csv (se recibió: #{archivo})."
         end
