@@ -1,7 +1,7 @@
 require_relative "generador_horario.rb"
 require_relative "dominio/errores.rb"
 require 'set'
-require "dominio/trabajador.rb"
+require_relative "dominio/trabajador.rb"
 module GeneradorHorario
     module_function
     def obtener_datos(archivo)
@@ -13,7 +13,7 @@ module GeneradorHorario
     end
 
     def leer_archivo(archivo)
-        file=File.readlines(archivo).drop(1)
+        File.readlines(archivo).drop(1)
     end
 
     def procesar_datos(file)
