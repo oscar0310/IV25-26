@@ -4,7 +4,14 @@ require 'set'
 require "dominio/trabajador.rb"
 module GeneradorHorario
     module_function
-
+    def obtener_datos(archivo)
+        comprobar_ext(archivo)
+        file=leer_archivo(archivo)
+        trabajadores_set=procesar_datos(file)
+        comprobar_num_Trabajadores(trabajadores_set)
+        trabajadores_set   
+    end
+    
     def leer_archivo(archivo)
         file=File.readlines(archivo).drop(1)
     end
