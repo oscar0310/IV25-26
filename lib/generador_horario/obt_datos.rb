@@ -11,7 +11,7 @@ module GeneradorHorario
         comprobar_num_Trabajadores(trabajadores_set)
         trabajadores_set   
     end
-    
+
     def leer_archivo(archivo)
         file=File.readlines(archivo).drop(1)
     end
@@ -36,7 +36,7 @@ module GeneradorHorario
 
         {
             id: id,
-            trabajdor: trabajador_obj,
+            trabajador: trabajador_obj,
             seccion: seccion
         }
     end
@@ -57,13 +57,13 @@ module GeneradorHorario
     end
 
     def comprobar_Seccion(seccion)
-        unless SECCIONES_VALIDAS.include?(seccion)
+        unless SECCIONES.include?(seccion)
          raise Dominio::SeccionNoValida, "La sección #{seccion} pasada en el archivo de entrada no es una sección valida, las secciones validas son: #{SECCIONES_VALIDAS.join(', ')}"  
         end 
     end
 
     def comprobar_num_Trabajadores(trabajadores_set)
-        for seccion in SECCIONES_VALIDAS
+        for seccion in SECCIONES
             comprobar_num_TrabajSeccion(trabajadores_set, seccion)
         end
     end
