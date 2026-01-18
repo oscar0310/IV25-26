@@ -32,6 +32,8 @@ class TestGeneradorHorario < Minitest::Test
   def test_acepta_archivo_csv
     GeneradorHorario::comprobar_ext("trabajadores.csv")
   end
+
+  def test_rechaza_archivo_no_csv
+    assert_match(/debe ser .csv/, assert_raises(ArgumentError){GeneradorHorario::comprobar_ext("trabajadores.txt")}.message)
+  end
 end
-
-
