@@ -1,3 +1,6 @@
+require 'minitest/autorun'
+
+
 
 
 
