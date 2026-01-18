@@ -19,4 +19,12 @@ class ReporterPersonalizado<Minitest::AbstractReporter
 end
 
 
+module Minitest
+  def self.plugin_personalizado_init(options)
+    self.reporter.reporters.clear
+    self.reporter << ReporterPersonalizado.new
+  end
+end
+
+Minitest.extensions << 'personalizado'
 
