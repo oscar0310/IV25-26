@@ -60,8 +60,10 @@ class TestGeneradorHorario < Minitest::Test
     GeneradorHorario::comprobar_Seccion(:carnicería)
   end
 
-  
-
-
-
+  def test_seccion_no_valida
+    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:droguería)}.message)
+    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:carniceria)}.message)
+    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:electronica)}.message)
+    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion("fruta")}.message)
+  end
 end
