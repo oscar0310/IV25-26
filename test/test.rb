@@ -51,4 +51,17 @@ class TestGeneradorHorario < Minitest::Test
     assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("12345")}.message)
     assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Juan @Pérez")}.message)
   end
+
+  def test_seccion_valida
+    GeneradorHorario::comprobar_Seccion(:pescadería)
+    GeneradorHorario::comprobar_Seccion(:panadería)
+    GeneradorHorario::comprobar_Seccion(:fruta)
+    GeneradorHorario::comprobar_Seccion(:charcutería)
+    GeneradorHorario::comprobar_Seccion(:carnicería)
+  end
+
+  
+
+
+
 end
