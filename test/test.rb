@@ -66,4 +66,15 @@ class TestGeneradorHorario < Minitest::Test
     assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:electronica)}.message)
     assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion("fruta")}.message)
   end
+
+  def test_leer_archivo_devuelve_un_numero_correcto_de_lineas
+      file1=GeneradorHorario::leer_archivo("docs/datos_entrada_validos.csv")
+      file2=GeneradorHorario::leer_archivo("docs/datos_entrada_menor.csv")
+      file3=GeneradorHorario::leer_archivo("docs/datos_entrada_vacio.csv")
+      assert_equal(25, file1.size)
+      assert_equal(12, file2.size)
+      assert_equal(0, file3.size)
+  end
+
+  
 end

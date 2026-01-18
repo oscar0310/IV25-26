@@ -62,7 +62,7 @@ module GeneradorHorario
          raise Dominio::SeccionNoValida, "La sección #{seccion} pasada en el archivo de entrada no es una sección valida, las secciones validas son: #{SECCIONES.join(', ')}"  
         end 
     end
-
+                                                                        
     def comprobar_num_Trabajadores(trabajadores_set)
         for seccion in SECCIONES
             comprobar_num_TrabajSeccion(trabajadores_set, seccion)
@@ -74,5 +74,5 @@ module GeneradorHorario
         if trabajadores_en_seccion.size < 5
             raise Dominio::RequisitosNunMinPersonas, "La sección #{seccion} no tiene el número mínimo de trabajadores requeridos (5)."
         end
-    end
+    end 
 end
