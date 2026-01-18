@@ -82,4 +82,11 @@ class TestGeneradorHorario < Minitest::Test
       assert_equal("Juan Pérez", resultado[:trabajador].nombre_y_apellidos)
       assert_equal(:pescadería, resultado[:seccion])
   end
+
+  def test_obtener_datos_trabajador_entrada_invalida
+      assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos_trabajador("Juan, pescadería", 0)}.message)
+      assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos_trabajador("Juan Pérez, droguería", 0)}.message)
+  end
+
+  
 end
