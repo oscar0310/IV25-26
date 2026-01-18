@@ -44,4 +44,11 @@ class TestGeneradorHorario < Minitest::Test
     GeneradorHorario::comprobar_nTrabajador("Óscar Fernández Rodríguez")
     GeneradorHorario::comprobar_nTrabajador("María José Carreño Quiñones")
   end
+
+  def test_nombre_trabajador_no_valido
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Juan")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Ana María López García Fernández")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("12345")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Juan @Pérez")}.message)
+  end
 end
