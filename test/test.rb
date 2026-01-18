@@ -28,3 +28,8 @@ end
 
 Minitest.extensions << 'personalizado'
 
+class TestGeneradorHorario < Minitest::Test
+
+end
+
+
