@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-
+require_relative '../lib/generador_horario/obt_datos.rb'
 
 class ReporterPersonalizado<Minitest::AbstractReporter
   def start
@@ -29,7 +29,9 @@ end
 Minitest.extensions << 'personalizado'
 
 class TestGeneradorHorario < Minitest::Test
-
+  def test_acepta_archivo_csv
+    GeneradorHorario::comprobar_ext("trabajadores.csv")
+  end
 end
 
 
