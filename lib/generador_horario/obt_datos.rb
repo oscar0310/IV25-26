@@ -48,10 +48,11 @@ module GeneradorHorario
     end  
     
     def comprobar_nTrabajador(nombre)
-        formato1=/^[a-zA-ZáéíóúñÑ]+\s+[a-zA-ZáéíóúñÑ]+$/
-        formato2=/^[a-zA-ZáéíóúñÑ]+\s+[a-zA-ZáéíóúñÑ]+\s+[a-zA-ZáéíóúñÑ]+$/
+        formato1=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/
+        formato2=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/
+        formato3=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/
 
-        unless nombre=~formato1 || nombre=~formato2
+        unless nombre=~formato1 || nombre=~formato2 || nombre=~formato3
             raise ArgumentError, "El nombre: #{nombre} pasado en el archivo de entrada no es un nombre valido, tiene que seguir el formato nombre apellido o nombre apellido1 apellido2"
         end
     end
@@ -74,5 +75,4 @@ module GeneradorHorario
             raise Dominio::RequisitosNunMinPersonas, "La sección #{seccion} no tiene el número mínimo de trabajadores requeridos (5)."
         end
     end
-
 end
