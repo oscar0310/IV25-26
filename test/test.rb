@@ -137,4 +137,24 @@ class TestGeneradorHorario < Minitest::Test
       assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::procesar_datos(file2)}.message)
   end
 
+  def test_comprobar_numero_trabajadores_en_seccion_valido
+    trabajadores_set=Set.new
+    for i in 1..5
+      trabajadores_set.add({id: i, trabajador: GeneradorHorario::Dominio::Trabajador.new("Trabajador #{i}"), seccion: :pescadería})
+    end
+    GeneradorHorario::comprobar_num_TrabajSeccion(trabajadores_set, :pescadería)
+  end
+
+  def test_comprobar_numero_trabajadores_en_seccion_con_entrada_vacia
+    trabajadores_set=Set.new
+    assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::comprobar_num_TrabajSeccion(trabajadores_set, :pescadería)}.message)
+  end
+
+  def test_comprobar_numero_trabajadores_en_seccion_con_menos_de_5
+    trabajadores_set=Set.new
+    for i in 1..4
+      trabajadores_set.add({id: i, trabajador: GeneradorHorario::Dominio::Trabajador.new("Trabajador #{i}"), seccion: :pescadería})
+    end
+    assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::comprobar_num_TrabajSeccion(trabajadores_set, :pescadería)}.message)
+  end
 end
