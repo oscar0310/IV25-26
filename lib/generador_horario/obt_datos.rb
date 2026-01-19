@@ -75,4 +75,6 @@ module GeneradorHorario
             raise Dominio::RequisitosNunMinPersonas, "La sección #{seccion} no tiene el número mínimo de trabajadores requeridos (5)."
         end
     end 
+
+    
 end
