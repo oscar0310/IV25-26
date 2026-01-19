@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require_relative '../lib/generador_horario/obt_datos.rb'
+require 'set'
 
 class ReporterPersonalizado<Minitest::AbstractReporter
   def start
@@ -88,5 +89,52 @@ class TestGeneradorHorario < Minitest::Test
       assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos_trabajador("Juan Pérez, droguería", 0)}.message)
   end
 
-  
+  def test_procesar_datos_devuelve_conjunto_correcto
+      file=[
+        "Juan Pérez, pescadería",
+        "Ana María López, panadería",
+        "José Ángel Rodríguez, fruta"
+      ]
+      resultado=GeneradorHorario::procesar_datos(file)
+      assert_equal(3, resultado.size)
+      juan=resultado.find do |datos_trabajador|
+        datos_trabajador[:trabajador].nombre_y_apellidos=="Juan Pérez" &&
+        datos_trabajador[:seccion]==:pescadería &&
+        datos_trabajador[:id]==0
+      end
+      ana=resultado.find do |datos_trabajador|
+        datos_trabajador[:trabajador].nombre_y_apellidos=="Ana María López" &&
+        datos_trabajador[:seccion]==:panadería &&
+        datos_trabajador[:id]==1
+      end
+      jose=resultado.find do |datos_trabajador|
+        datos_trabajador[:trabajador].nombre_y_apellidos=="José Ángel Rodríguez" &&
+        datos_trabajador[:seccion]==:fruta &&
+        datos_trabajador[:id]==2
+      end
+
+      refute_nil(juan, "No se encontró a el primer trabajador en el conjunto de datos procesados")
+      refute_nil(ana, "No se encontró a el segundo trabajador en el conjunto de datos procesados")
+      refute_nil(jose, "No se encontró a el tercer trabajador en el conjunto de datos procesados")
+  end
+
+  def test_procesar_datos_devuelve_conjunto_vacio
+      file=[]
+      resultado=GeneradorHorario::procesar_datos(file)
+      assert_empty(resultado)
+  end
+
+  def test_procesar_datos_con_entrada_invalida
+      file1=[
+        "Juan, pescadería",
+        "Ana María López, panadería"
+      ]
+      file2=[
+        "Juan Pérez, pescadería",
+        "Ana María López, droguería"
+      ]
+      assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::procesar_datos(file1)}.message)
+      assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::procesar_datos(file2)}.message)
+  end
+
 end

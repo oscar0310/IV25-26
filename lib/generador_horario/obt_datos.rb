@@ -17,7 +17,7 @@ module GeneradorHorario
     end
 
     def procesar_datos(file)
-        trabajadores_set=Set.new[]
+        trabajadores_set=Set.new
         file.each_with_index do |linea, id|
             datos_trabajador=obtener_datos_trabajador(linea, id)
             trabajadores_set.add(datos_trabajador)
