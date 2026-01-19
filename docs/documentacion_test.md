@@ -38,7 +38,9 @@ Es el nivel más alto de abstracción, también conocidos como test runners, son
 
 Como criterio de elección se busca que la herramienta sea capaz de automatizar la ejecución de los test de cara a los proximos objetivos de la asignatura y no se necesite instalar gemas evitando configuraciones innecesarias y reduciendo la deuda técnica.
 
-A la hora de elegir una herramienta CLI para ejecutar los tests en ruby con Minitest tenemos las siguientes opciones:
+A la hora de elegir una herramienta CLI para ejecutar los tests en ruby con Minitest tenemos no tenemos una gran variedad de opciones:
+
+- Ejecución nativa(Ruby):Aunque no sea una herramienta CLI como tal, ruby permite ejecutar los test directamente desde la línea de comandos usando el intérprete de ruby seguido del script que contiene los test como podemos ver en la documentación de [minitest](https://github.com/minitest/minitest?tab=readme-ov-file#running-your-tests). Esta opción no requiere instalar gemas adicionales pero no permite automatizar la ejecución de los test, ya que cada vez que se quieran ejecutar los test hay que escribir el comando manualmente.
 
 - [Rake::TestTask](https://ruby.github.io/rake/Rake/TestTask.html) es una herramienta que viene por defecto con el gestor de tareas [Rake](https://ruby.github.io/rake/), el cual ya fue elegido en la documentación del gestor de tareas. Rake::TestTask permite definir tareas para ejecutar los test independientemente del framework de test que se use. Al formar parte de Rake no es necesario instalar ninguna gema adicional para su uso. Esta herramienta permite definir tareas personalizadas para ejecutar los test facilitando la automatización.
 
