@@ -183,4 +183,16 @@ class TestGeneradorHorario < Minitest::Test
     assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::comprobar_num_Trabajadores(trabajadores_set)}.message)
   end
 
+  def test_obtener_datos_validos
+    trabjadores_set=GeneradorHorario::obtener_datos("docs/datos_entrada_validos.csv")
+    assert_equal(25, trabjadores_set.size)
+  end
+
+  def test_obtener_datos_con_entradas_invalidas
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos("docs/datos_entrada_nombre_erroneo.csv")}.message)
+    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos("docs/datos_entrada_seccion_erronea.csv")}.message)
+    assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::obtener_datos("docs/datos_entrada_menor.csv")}.message)
+    assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::obtener_datos("docs/datos_entrada_vacio.csv")}.message)
+    assert_match(/debe ser .csv/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos("docs/ejemploEntrada.xlsx")}.message)
+  end
 end
