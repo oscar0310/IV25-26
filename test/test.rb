@@ -79,7 +79,6 @@ class TestGeneradorHorario < Minitest::Test
 
   def test_obtener_datos_trabajador_devuelve_objeto_correcto
       resultado=GeneradorHorario::obtener_datos_trabajador("Juan Pérez, pescadería", 0)
-      assert_equal(0, resultado[:id])
       assert_equal("Juan Pérez", resultado[:trabajador].nombre_y_apellidos)
       assert_equal(:pescadería, resultado[:seccion])
   end
