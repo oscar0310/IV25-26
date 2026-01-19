@@ -9,7 +9,7 @@ Como criterio de elección se busca que la librería de aserciones siga el estil
 
 En ruby tenemos varias opciones en cuanto a librería de aserciones:
 
-- [Minitest::Assertions](https://docs.ruby-lang.org/en/2.1.0/MiniTest/Assertions.html) es la librería de aserciones que viene por defecto con Minitest esta sigue el estilo clásico de las aserciones como podemos ver en funciones como assert_equal(exp, act, msg = nil) o assert_empty(obj, msg = nil). Esta librería no requiere instalar gemas externas adicionales ya que viene incluida en la librería estándar de ruby.
+- [Minitest::Assertions](https://www.rubydoc.info/gems/minitest/Minitest/Assertions) es la librería de aserciones que viene por defecto con Minitest esta sigue el estilo clásico de las aserciones como podemos ver en funciones como assert_equal(exp, act, msg = nil) o assert_empty(obj, msg = nil). Esta librería no requiere instalar gemas externas adicionales ya que viene incluida en la librería estándar de ruby.
 
 - [RSpec Expectations](https://rspec.info/documentation/3.12/rspec-expectations/) es la librería de aserciones del ecosistema RSpec. Sigue el estilo BDD, utilizando cadenas que intentas parecerse al inglés como podemos ver en su documentación con ejemplos como: expect(actual).to_be(expected) o expect(actual).to_match(/expresion/). Esta librería requiere instalar gemas externas adicionales y necesita configuración adicional para su uso.
 
