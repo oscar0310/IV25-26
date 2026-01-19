@@ -42,8 +42,6 @@ A la hora de elegir una herramienta CLI para ejecutar los tests en ruby con Mini
 
 - [Rake::TestTask](https://ruby.github.io/rake/Rake/TestTask.html) es una herramienta que viene por defecto con el gestor de tareas [Rake](https://ruby.github.io/rake/), el cual ya fue elegido en la documentación del gestor de tareas. Rake::TestTask permite definir tareas para ejecutar los test independientemente del framework de test que se use. Al formar parte de Rake no es necesario instalar ninguna gema adicional para su uso. Esta herramienta permite definir tareas personalizadas para ejecutar los test facilitando la automatización.
 
-- [m](https://github.com/qrush/m) es una herramienta CLI capaz de ejecutar test en minitest y test::unit. Esta herramienta está diseñada para que una persona ejecute los test manualmente desde la línea de comandos, por tanto no está orientada a la automatización de la ejecución de los test. Además requiere instalar una gema adicional para su uso. 
-
 - [mighty_test](https://github.com/mattbrictson/mighty_test) es otra herramienta CLI moderna para ejecutar test en minitest. Esta herramienta prioriza la interacción con el usuario con menús y watch mode para ejecutar los test de manera manual aunque también es capaz de ejecutar los test de manera automática. Al igual que la anterior requiere instalar una gema adicional para su uso. 
 
 Siguiendo los criterios de elección nos quedamos con Rake::TestTask ya que es la herramienta más adecuada para automatizar la ejecución de los test y no es necesario instalar ninguna gema adicional.
