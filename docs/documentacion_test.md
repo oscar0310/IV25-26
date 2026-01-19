@@ -24,7 +24,7 @@ Como criterio de elección se busca que el framework no necesite librerías exte
 
 En ruby tenemos varias opciones en cuanto a frameworks de test:
 
--[Minitest](https://minite.st/index.html) es el framework de test que viene incluido por defecto incluida en el lenguaje, por tanto no requiere de ninguna librería externa adicional y no necesita configuración para su uso. Este framework sigue el estilo clásico de TDD como podemos ver en su documentación con ejemplos como: assert_equal(expected, actual, message = nil) o assert_match(expected_pattern, actual_string, message = nil).
+-[Minitest](https://minite.st/index.html) es el framework de test que viene incluido por defecto en el lenguaje, por tanto no requiere de ninguna librería externa adicional y no necesita configuración para su uso. Este framework sigue el estilo clásico de TDD como podemos ver en su documentación con ejemplos como: assert_equal(expected, actual, message = nil) o assert_match(expected_pattern, actual_string, message = nil).
 
 -[Rspec-core](https://rspec.info/documentation/3.13/rspec-core/) framework de test muy popular en ruby que viene con el ecosistema RSpec, este requiere instalar gemas externas adicionales y necesita configuración adicional para su uso. Este framework sigue el estilo BDD como podemos ver en su documentación con ejemplos como: expect(actual).to_be(expected) o expect(actual).to_match(/expresion/).
 
