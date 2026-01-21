@@ -3,8 +3,6 @@
 Para asegurarnos de que el desarrollo del proyecto cumple todos los deseos del cliente, necesitamos realizar test. Los test son los encargados de verificar que se cumplen estos requisitios. Estas herramientas se dividen en varios niveles de abstracción para ello vamos a ir viendo los diferenetes niveles y nos quedaremos con una herramienta en cada nivel.
 
 ## Nivel de Aserciones:
-Este es el nivel más bajo de abstracción, son funciones que se encargan de comparar la salida obtenida con la deseada.
-
 Como criterio de elección se busca que la librería de aserciones siga el estilo TDD clásico (assert_equal(esperado,valor_actual)) priorizandolo frente al estilo BDD(expect.(actual).to_eq(experado)) y no se requiera instalar gemas externas adicionales para su uso, evitando tener que añadir archivos de configuración adicionales.
 
 En ruby tenemos varias opciones en cuanto a librería de aserciones:
@@ -18,8 +16,6 @@ En ruby tenemos varias opciones en cuanto a librería de aserciones:
 Siguiendo los criterios de elección nos quedamos con [Minitest::Assertions](https://www.ruby-toolbox.com/categories/testing_frameworks) ya que sigue el estilo TDD y no requiere instalar gemas externas adicionales, evitando tener que añadir archivos de configuración adicionales.
 
 ## Nivel Test runners o frameworks:
-Este es el nivel intermedio de abstracción. Esta herramienta se encarga de ejecutarlos, agruparlos y planificar los tests. También puede incluir fixtures o funciones para crear objetos que se van a utilizar. 
-
 Como criterio de elección se busca que el framework no necesite librerías externas requiriendo un mínimo de configuración y siga el estilo TDD clásico (assert_equal(esperado,valor_actual)) priorizandolo frente al estilo BDD(expect.(actual).to_eq(experado)).
 
 En ruby tenemos varias opciones en cuanto a frameworks de test:
@@ -33,9 +29,6 @@ En ruby tenemos varias opciones en cuanto a frameworks de test:
 Siguiendo los criterios de elección nos quedamos con Minitest ya que no requiere librerías externas adicionales y sigue el estilo TDD clásico.
 
 ## Nivel Herramientas CLI para ejecutar los tests:
-
-Es el nivel más alto de abstracción, también conocidos como test runners, son los encargados ejecutar los test. Buscan los diferentes scripts que ejecutan los test, analizan la salida y producen un informe.
-
 Como criterio de elección se busca que la herramienta sea capaz de automatizar la ejecución de los test de cara a los proximos objetivos de la asignatura y no se necesite instalar gemas evitando configuraciones innecesarias y reduciendo la deuda técnica.
 
 A la hora de elegir una herramienta CLI para ejecutar los tests en ruby con Minitest tenemos no tenemos una gran variedad de opciones:
