@@ -53,7 +53,7 @@ module GeneradorHorario
         formato3=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/
 
         unless nombre=~formato1 || nombre=~formato2 || nombre=~formato3
-            raise ArgumentError, "El nombre: #{nombre} pasado en el archivo de entrada no es un nombre valido, tiene que seguir el formato nombre apellido o nombre apellido1 apellido2"
+            raise ArgumentError, "El nombre: #{nombre} pasado en el archivo de entrada no es un nombre válido, tiene que seguir el formato nombre apellido o nombre apellido1 apellido2"
         end
     end
 
