@@ -59,7 +59,7 @@ module GeneradorHorario
 
     def comprobar_Seccion(seccion)
         unless SECCIONES.include?(seccion)
-         raise Dominio::SeccionNoValida, "La sección #{seccion} pasada en el archivo de entrada no es una sección valida, las secciones validas son: #{SECCIONES.join(', ')}"  
+         raise Dominio::SeccionNoValida, "La sección #{seccion} pasada en el archivo de entrada no es una sección válida, las secciones válidas son: #{SECCIONES.join(', ')}"  
         end 
     end
 

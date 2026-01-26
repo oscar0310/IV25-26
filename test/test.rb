@@ -47,10 +47,10 @@ class TestGeneradorHorario < Minitest::Test
   end
 
   def test_nombre_trabajador_no_valido
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Juan")}.message)
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Ana María López García Fernández")}.message)
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("12345")}.message)
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Juan @Pérez")}.message)
+    assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Juan")}.message)
+    assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Ana María López García Fernández")}.message)
+    assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("12345")}.message)
+    assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Juan @Pérez")}.message)
   end
 
   def test_seccion_valida
@@ -62,10 +62,10 @@ class TestGeneradorHorario < Minitest::Test
   end
 
   def test_seccion_no_valida
-    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:droguería)}.message)
-    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:carniceria)}.message)
-    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:electronica)}.message)
-    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion("fruta")}.message)
+    assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:droguería)}.message)
+    assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:carniceria)}.message)
+    assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion(:electronica)}.message)
+    assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::comprobar_Seccion("fruta")}.message)
   end
 
   def test_leer_archivo_devuelve_un_numero_correcto_de_lineas
@@ -84,8 +84,8 @@ class TestGeneradorHorario < Minitest::Test
   end
 
   def test_obtener_datos_trabajador_entrada_invalida
-      assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos_trabajador("Juan, pescadería", 0)}.message)
-      assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos_trabajador("Juan Pérez, droguería", 0)}.message)
+      assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos_trabajador("Juan, pescadería", 0)}.message)
+      assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos_trabajador("Juan Pérez, droguería", 0)}.message)
   end
 
   def test_procesar_datos_devuelve_conjunto_correcto
@@ -132,8 +132,8 @@ class TestGeneradorHorario < Minitest::Test
         "Juan Pérez, pescadería",
         "Ana María López, droguería"
       ]
-      assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::procesar_datos(file1)}.message)
-      assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::procesar_datos(file2)}.message)
+      assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::procesar_datos(file1)}.message)
+      assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::procesar_datos(file2)}.message)
   end
 
   def test_comprobar_numero_trabajadores_en_seccion_valido
@@ -188,8 +188,8 @@ class TestGeneradorHorario < Minitest::Test
   end
 
   def test_obtener_datos_con_entradas_invalidas
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos("docs/datos_entrada_nombre_erroneo.csv")}.message)
-    assert_match(/no es una sección valida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos("docs/datos_entrada_seccion_erronea.csv")}.message)
+    assert_match(/no es un nombre válido/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos("docs/datos_entrada_nombre_erroneo.csv")}.message)
+    assert_match(/no es una sección válida/, assert_raises(GeneradorHorario::Dominio::SeccionNoValida){GeneradorHorario::obtener_datos("docs/datos_entrada_seccion_erronea.csv")}.message)
     assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::obtener_datos("docs/datos_entrada_menor.csv")}.message)
     assert_match(/no tiene el número mínimo de trabajadores/, assert_raises(GeneradorHorario::Dominio::RequisitosNunMinPersonas){GeneradorHorario::obtener_datos("docs/datos_entrada_vacio.csv")}.message)
     assert_match(/debe ser .csv/, assert_raises(ArgumentError){GeneradorHorario::obtener_datos("docs/ejemploEntrada.xlsx")}.message)
