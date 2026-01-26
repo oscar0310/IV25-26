@@ -29,7 +29,7 @@ module GeneradorHorario
         columnas=linea.split(',')
         nombre_trabajador=columnas[0].strip
         seccion=columnas[1].strip.downcase.to_sym
-        comprobar_nTrabajador(nombre_trabajador)
+        comprobar_nombre_trabajador(nombre_trabajador)
         comprobar_Seccion(seccion)
 
         trabajador_obj=Dominio::Trabajador.new(nombre_trabajador)
@@ -47,7 +47,7 @@ module GeneradorHorario
         end
     end  
     
-    def comprobar_nTrabajador(nombre)
+    def comprobar_nombre_trabajador(nombre)
         formato1=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/
         formato2=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/
         formato3=/^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\s+[a-zA-ZáéíóúÁÉÍÓÚñÑ]+$/

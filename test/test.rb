@@ -39,18 +39,18 @@ class TestGeneradorHorario < Minitest::Test
   end
 
   def test_nombre_trabajador_valido
-    GeneradorHorario::comprobar_nTrabajador("Juan Pérez")
-    GeneradorHorario::comprobar_nTrabajador("Ana María López")
-    GeneradorHorario::comprobar_nTrabajador("José Ángel Rodríguez")
-    GeneradorHorario::comprobar_nTrabajador("Óscar Fernández Rodríguez")
-    GeneradorHorario::comprobar_nTrabajador("María José Carreño Quiñones")
+    GeneradorHorario::comprobar_nombre_trabajador("Juan Pérez")
+    GeneradorHorario::comprobar_nombre_trabajador("Ana María López")
+    GeneradorHorario::comprobar_nombre_trabajador("José Ángel Rodríguez")
+    GeneradorHorario::comprobar_nombre_trabajador("Óscar Fernández Rodríguez")
+    GeneradorHorario::comprobar_nombre_trabajador("María José Carreño Quiñones")
   end
 
   def test_nombre_trabajador_no_valido
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Juan")}.message)
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Ana María López García Fernández")}.message)
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("12345")}.message)
-    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nTrabajador("Juan @Pérez")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Juan")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Ana María López García Fernández")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("12345")}.message)
+    assert_match(/no es un nombre valido/, assert_raises(ArgumentError){GeneradorHorario::comprobar_nombre_trabajador("Juan @Pérez")}.message)
   end
 
   def test_seccion_valida
