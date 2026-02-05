@@ -64,3 +64,6 @@ Para no llenar la documentación de capturas de pantalla, se muestra una tabla r
 | ruby:alpine |0                       |
 | phusion/passenger-ruby |44                       |
 | rubylang/ruby |27                    |
+
+## IMAGEN BASE ELEGIDA
+Tras aplicar los distintos criterios a cada una de la imágenes base, obtenemos que la imagen que dispone de una shell, tiene un menor tamaño junto con la infraestructura de testeo y tiene un menor número de vulnerabilidades es la imagen oficial de ruby:alpine, por lo tanto se elige esta imagen como imagen base del contenedor de testeo de la aplicación.
