@@ -28,3 +28,20 @@ La documentación de estas imágenes oficiales se encuentra en este [enlace](htt
 - **phusion/passenger-ruby**: Imagen mantenida por Phusion. Esta imagen es al contrario que la anterior es unna imagen todo en uno, incluyendo un sistema operativo basado en ubuntu junto a un servidor web. Esto hace que el tamaño de la imagen sea elevado, aunque incluye muchas herramientas útiles para el desarrollo y testeo de aplicaciones Ruby. [Documentación](https://github.com/phusion/passenger-docker).
 
 - **rubylang/ruby**: Imagen mantenida por los propios desarrolladores de Ruby y su comunidad. Esta  basada en ubuntu y ofrece ventajas en tamaño base frente a la oficial. [Documentación](https://hub.docker.com/r/rubylang/ruby/). 
+
+## EVALUACIÓN DE LAS IMÁGENES BASE
+
+### Evaluación de la shell:
+
+Aplicamos el criterio de la shell a cada una de las imágenes base evaluadas, obteniendo los siguientes resultados:
+| Imagen Base | Dispone de Shell |
+|-------------|------------------|
+| ruby        | Sí               |
+| ruby:slim   | Sí               |
+| ruby:alpine | Sí               |
+| openeuler/distroless-ruby:<version> | No               |
+| phusion/passenger-ruby | Sí               |
+| rubylang/ruby | Sí               |
+
+La imagen openeuler/distroless-ruby:<version> no dispone de shell, lo que dificulta la interacción con el contenedor y la ejecución de comandos necesarios para el testeo. Por lo tanto, esta imagen no cumple con el criterio de disponer de una shell y se descarta para su uso como imagen base del contenedor de testeo.
+
