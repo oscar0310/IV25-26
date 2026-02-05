@@ -45,3 +45,10 @@ Aplicamos el criterio de la shell a cada una de las imágenes base evaluadas, ob
 
 La imagen openeuler/distroless-ruby:<version> no dispone de shell, lo que dificulta la interacción con el contenedor y la ejecución de comandos necesarios para el testeo. Por lo tanto, esta imagen no cumple con el criterio de disponer de una shell y se descarta para su uso como imagen base del contenedor de testeo.
 
+### Evaluación tamaño final de la imagen base con la infraestructura de testeo:
+Aplicamos el criterio del tamaño final de la imagen base con la infraestructura de testeo a cada una de las imágenes base evaluadas, obteniendo los siguientes resultados:
+
+![Tamaños](../assets/tamaños_imagenes_prueba.png)
+
+Como se puede observar en la imagen anterior con los resultados, la imagen de menor tamaño es la imagen oficial de ruby:alpine, seguida de la imagen rubylang/ruby y la imagen slim. Y las imágenes con mayor tamaño son la imagen phusion/passenger-ruby y la imagen oficial de ruby como era de esperar, ya que incluyen un sistema operativo completo y muchas herramientas adicionales.
+
