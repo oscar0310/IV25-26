@@ -9,3 +9,5 @@ ENV BUNDLE_PATH="$GEM_HOME"
 ENV PATH="$GEM_HOME/bin:$PATH"
 
 RUN mkdir -p "$GEM_HOME" && chown -R user_sin_permisos:user_sin_permisos "$GEM_HOME"
+
+WORKDIR /app
