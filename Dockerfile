@@ -17,3 +17,5 @@ USER user_sin_permisos
 COPY --chown=user_sin_permisos:user_sin_permisos Gemfile Gemfile.lock ./
 
 RUN bundle install
+
+WORKDIR /app/test
