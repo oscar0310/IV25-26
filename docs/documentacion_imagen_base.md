@@ -23,11 +23,11 @@ La documentación de estas imágenes oficiales se encuentra en este [enlace](htt
 
 - **ruby:alpine**: esta versión usa Alpine Linux como base, esta diseñada específicamente para contenedores y en lugar de usar glibc usa musl, esto hace que se reduzca bastante el tamaño. Aunque al usar musl puede provocar problemas de compatibilidad con algunas gemas que esperan glibc.
 
-- **rubylang/ruby**: Imagen mantenida por los propios desarrolladores de Ruby y su comunidad. Esta  basada en ubuntu y ofrece ventajas en tamaño base frente a la oficial. [Documentación](https://hub.docker.com/r/rubylang/ruby/). 
+- **rubylang/ruby**: Imagen mantenida por los propios desarrolladores de Ruby y su comunidad. Esta  basada en ubuntu y ofrece ventajas en tamaño base frente a la mantenida por docker. [Documentación](https://hub.docker.com/r/rubylang/ruby/). 
 
 ### Imágenes no oficiales (Creadas por empresas o proyectos de la comunidad):
 
-- **openeuler/distroless-ruby:<version>**: Esta imagen sigue la filosofía del proyecto [Distroless](https://github.com/GoogleContainerTools/distroless) de google pero es mantenida por la comunidad de openeuler. Las imágenes distroless están diseñadas para contener solo la aplicación y sus dependencias, sin incluir un sistema operativo completo. Esto reduce significativamente el tamaño de la imagen y minimiza la superficie de ataque, ya que no hay shell ni herramientas adicionales que puedan ser explotadas. [Documentación](https://hub.docker.com/r/openeuler/distroless-ruby).
+- **openeuler/distroless-ruby:<version>**: Esta imagen sigue la filosofía del proyecto [Distroless](https://github.com/GoogleContainerTools/distroless) de google pero es mantenida por la comunidad de openeuler. Las imágenes distroless están diseñadas para contener solo la aplicación y sus dependencias, sin incluir un sistema operativo completo. Esto reduce significativamente el tamaño de la imagen y minimiza la superficie de ataque, ya que no hay shell ni herramientas adicionales que puedan ser explotadas.  [Documentación](https://hub.docker.com/r/openeuler/distroless-ruby).
 
 - **phusion/passenger-ruby**: Imagen mantenida por Phusion. Esta imagen es al contrario que la anterior es una imagen todo en uno, incluyendo un sistema operativo basado en ubuntu junto a un servidor web. Esto hace que el tamaño de la imagen sea elevado, aunque incluye muchas herramientas útiles para el desarrollo y testeo de aplicaciones Ruby. [Documentación](https://github.com/phusion/passenger-docker).
 
@@ -51,4 +51,3 @@ Como resultado de esta evaluación se obtiene los siguientes tamaños finales de
 ![Tamaños](../assets/tamaños_imagenes_prueba.png)
 
 Como se puede observar en la imagen anterior con los resultados, la imagen de menor tamaño es la imagen oficial de ruby:alpine, seguida de la imagen rubylang/ruby y la imagen slim. Y las imágenes con mayor tamaño son la imagen phusion/passenger-ruby y la imagen oficial de ruby como era de esperar, ya que incluyen un sistema operativo completo y muchas herramientas adicionales.
-
