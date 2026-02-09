@@ -31,6 +31,19 @@ La documentación de estas imágenes oficiales se encuentra en este [enlace](htt
 
 - **phusion/passenger-ruby**: Imagen mantenida por Phusion. Esta imagen es al contrario que la anterior es una imagen todo en uno, incluyendo un sistema operativo basado en ubuntu junto a un servidor web. Esto hace que el tamaño de la imagen sea elevado, aunque incluye muchas herramientas útiles para el desarrollo y testeo de aplicaciones Ruby. [Documentación](https://github.com/phusion/passenger-docker).
 
+## EVALUACIÓN DE LAS IMÁGENES BASE
+
+## Aplicando los criterios de que permita usar Bundler y Rake:
+
+- **ruby**: Permite usar Bundler y Rake, ya que es una imagen completa basada en Debian que incluye un sistema operativo completo con todas las herramientas necesarias para el desarrollo y testeo de aplicaciones Ruby.
+- **ruby:slim**: Permite usar Bundler y Rake, ya que es una versión reducida de la imagen oficial pero sigue incluyendo las herramientas necesarias para el desarrollo y testeo de aplicaciones Ruby.
+- **ruby:alpine**: Permite usar Bundler y Rake, aunque al usar musl en lugar de glibc puede provocar problemas de compatibilidad con algunas gemas que esperan glibc, lo que podría dificultar el uso de Bundler y Rake en algunos casos.
+- **rubylang/ruby**: Permite usar Bundler y Rake, ya que es una imagen basada en Ubuntu que incluye un sistema operativo completo con todas las herramientas necesarias para el desarrollo y testeo de aplicaciones Ruby.
+- **openeuler/distroless-ruby**: No permite usar Bundler y Rake, ya que es una imagen distroless diseñada para contener solo la aplicación y sus dependencias, sin incluir un sistema operativo completo ni herramientas adicionales.
+- **phusion/passenger-ruby**: Permite usar Bundler y Rake, ya que es una imagen todo en uno que incluye un sistema operativo basado en Ubuntu junto a un servidor web, lo que proporciona todas las herramientas necesarias para el desarrollo y testeo de aplicaciones Ruby.   
+
+Se descarta la imagen **openeuler/distroless-ruby** ya que no permite usar Bundler y Rake, lo que es un requisito fundamental para el testeo de la aplicación, ya que son necesarios para instalar las dependencias y ejecutar las tareas de testeo de la aplicación.
+
 
 
 
