@@ -6,7 +6,7 @@ RUN adduser -D user_sin_permisos
 
 USER user_sin_permisos
 
-COPY Gemfile Gemfile.lock ./
+COPY --chown=user_sin_permisos:user_sin_permisos Gemfile Gemfile.lock ./
 
 RUN bundle install
 
