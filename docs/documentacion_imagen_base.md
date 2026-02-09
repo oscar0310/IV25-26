@@ -51,3 +51,18 @@ Como resultado de esta evaluación se obtiene los siguientes tamaños finales de
 ![Tamaños](../assets/tamaños_imagenes_prueba.png)
 
 Como se puede observar en la imagen anterior con los resultados, la imagen de menor tamaño es la imagen oficial de ruby:alpine, seguida de la imagen rubylang/ruby y la imagen slim. Y las imágenes con mayor tamaño son la imagen phusion/passenger-ruby y la imagen oficial de ruby como era de esperar, ya que incluyen un sistema operativo completo y muchas herramientas adicionales.
+
+### Evaluación de seguridad:
+Aplicamos el criterio de seguridad a cada una de las imágenes base evaluadas, obteniendo los siguientes resultados con la herramienta de análisis de vulnerabilidades Snyk:
+
+Para no llenar la documentación de capturas de pantalla, se muestra una tabla resumen con el número de vulnerabilidades encontradas en cada imagen base evaluada, en caso de querer ver la captura del análisis se encuentra en la carpeta de [assets](../assets).
+
+| Imagen Base | Número de Vulnerabilidades |
+|-------------|---------------------------|
+| ruby        |202                        |
+| ruby:slim   |70                     |
+| ruby:alpine |0                       |
+| phusion/passenger-ruby |44                       |
+| rubylang/ruby |27                    |
+
+Se puede observar que las imágenes con menos vulnerabilidades son ruby:alpine, seguida de rubylang/ruby y phusion/passenger-ruby. Las que más vulnerabilidades tienen son ruby y ruby:slim.
