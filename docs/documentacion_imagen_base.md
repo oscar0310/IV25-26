@@ -66,3 +66,6 @@ Para no llenar la documentación de capturas de pantalla, se muestra una tabla r
 | rubylang/ruby |27                    |
 
 Se puede observar que las imágenes con menos vulnerabilidades son ruby:alpine, seguida de rubylang/ruby y phusion/passenger-ruby. Las que más vulnerabilidades tienen son ruby y ruby:slim.
+
+## IMAGEN BASE ELEGIDA
+Tras aplicar los distintos criterios a cada una de la imágenes base, obtenémos que la imagen más optima que cumple todos los criterios es ruby:alpine, ya que permite el uso de Bundler y Rake, el tamaño junto a la infraestructura de test es la menor y es la más segura ya que no tiene vulnerabilidades.
