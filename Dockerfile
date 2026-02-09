@@ -4,6 +4,8 @@ RUN apk add --no-cache build-base
 
 RUN adduser -D user_sin_permisos
 
+USER user_sin_permisos
+
 COPY Gemfile Gemfile.lock ./
 
 RUN bundle install
