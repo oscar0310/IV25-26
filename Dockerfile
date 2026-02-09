@@ -1,5 +1,6 @@
 FROM ruby:alpine
-RUN apk add --no-cache build-base
+
+RUN apk add --no-cache build-base #intentando resolver el comentario
 
 RUN adduser -D user_sin_permisos
 
