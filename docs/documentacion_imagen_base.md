@@ -33,7 +33,7 @@ La documentación de estas imágenes oficiales se encuentra en este [enlace](htt
 
 ## EVALUACIÓN DE LAS IMÁGENES BASE
 
-## Aplicando los criterios de que permita usar Bundler y Rake:
+### Aplicando los criterios de que permita usar Bundler y Rake:
 
 - **ruby**: Permite usar Bundler y Rake, ya que es una imagen completa basada en Debian que incluye un sistema operativo completo con todas las herramientas necesarias para el desarrollo y testeo de aplicaciones Ruby.
 - **ruby:slim**: Permite usar Bundler y Rake, ya que es una versión reducida de la imagen oficial pero sigue incluyendo las herramientas necesarias para el desarrollo y testeo de aplicaciones Ruby.
@@ -44,6 +44,11 @@ La documentación de estas imágenes oficiales se encuentra en este [enlace](htt
 
 Se descarta la imagen **openeuler/distroless-ruby** ya que no permite usar Bundler y Rake, lo que es un requisito fundamental para el testeo de la aplicación, ya que son necesarios para instalar las dependencias y ejecutar las tareas de testeo de la aplicación.
 
+### Aplicando el criterio del tamaño:
+Siguiendo el criterio del tamaño se evalua el tamaño de las imágenes candidatas con la infraestructura de testeo buscando la imagen más ligera.
+Como resultado de esta evaluación se obtiene los siguientes tamaños finales de las imágenes candidatas:
 
+![Tamaños](../assets/tamaños_imagenes_prueba.png)
 
+Como se puede observar en la imagen anterior con los resultados, la imagen de menor tamaño es la imagen oficial de ruby:alpine, seguida de la imagen rubylang/ruby y la imagen slim. Y las imágenes con mayor tamaño son la imagen phusion/passenger-ruby y la imagen oficial de ruby como era de esperar, ya que incluyen un sistema operativo completo y muchas herramientas adicionales.
 
