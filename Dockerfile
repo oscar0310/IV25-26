@@ -12,7 +12,7 @@ RUN mkdir -p "$GEM_HOME" && chown -R user_sin_permisos:user_sin_permisos "$GEM_H
 
 USER user_sin_permisos
 
-COPY --chown=user_sin_permisos:user_sin_permisos Gemfile Gemfile.lock ./
+COPY --chown=user_sin_permisos Gemfile Gemfile.lock ./
 
 RUN bundle install
 
